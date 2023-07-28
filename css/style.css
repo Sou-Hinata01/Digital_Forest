@@ -1,0 +1,568 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+input {
+  font-size: 100%;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+body {
+  font-size: 1.15rem;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.mv-slider {
+  position: relative;
+  z-index: 1;
+  height: 400px;
+}
+
+.mainvisual01 {
+  background: url(../img/Magician.png);
+  background-position-y: -150px;
+}
+
+.mainvisual02 {
+  background: url(../img/Death_Master.PNG);
+  background-position-y: -200px;
+}
+
+.mainvisual03 {
+  background: url(../img/Ultimate_Magic.png);
+  background-position-y: -400px;
+}
+
+.slide {
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.site-title {
+  line-height: 1.4;
+  transition: 0.2s;
+}
+
+.site-title:hover {
+  opacity: 0.7;
+  transform: scale(1.1, 1.1);
+}
+
+.navigation {
+  display: flex;
+  background-color: #fff;
+  flex-direction: row;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 100px 0;
+}
+
+.navigation .nav-menu li {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: 0.2s;
+}
+
+.navigation .nav-menu li:hover {
+  opacity: 0.9;
+  transform: scale(1.15, 1.15);
+}
+
+.navigation .site-title a,
+.navigation .nav-menu a {
+  color: #333;
+}
+
+.navigation .nav-menu {
+  list-style: none;
+  display: flex;
+}
+
+.navigation .nav-menu li {
+  padding: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+.navigation .nav-menu a {
+  font-size: 18px;
+}
+
+.navigation.fixed {
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+/* ハンバーガーメニュー */
+.hamburger {
+  position: relative;
+  display: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: #666 solid 1px;
+  border-radius: 5px;
+}
+
+/* ボタン内部 */
+.hamburger span {
+  display: inline-block;
+  transition: all 0.3s; /*アニメーションの設定*/
+  position: absolute;
+  left: 13px;
+  height: 3px;
+  border-radius: 2px;
+  background: #666;
+  width: 45%;
+}
+
+.hamburger span:nth-of-type(1) {
+  top: 15px;
+}
+
+.hamburger span:nth-of-type(2) {
+  top: 23px;
+}
+
+.hamburger span:nth-of-type(3) {
+  top: 31px;
+}
+
+.hamburger.active span:nth-of-type(1),
+.hamburger.active span:nth-of-type(2) {
+  top: 18px;
+  left: 13px;
+  transform: translateY(6px) rotate(-45deg);
+}
+
+.hamburger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-of-type(3) {
+  top: 30px;
+  left: 13px;
+  transform: translateY(-6px) rotate(45deg);
+}
+
+.wrap {
+  max-width: 1058px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  /* overflow: hidden; */
+}
+
+.sec-title {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px;
+}
+
+#works .works-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#works .works-list li {
+  width: 33%;
+  border: solid 1px #fff;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+#works .works-list li a {
+  display: block;
+}
+
+#works .works-list li a::after {
+  content: "";
+  box-shadow: 0 -30px 15px -1px #666 inset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#works .works-list .workname {
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  bottom: 4px;
+  left: 10px;
+  z-index: 5;
+}
+
+#about {
+  flex-direction: column;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  letter-spacing: 0.15em;
+  margin: 15px auto;
+}
+
+.about-text .catch-jp {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 30px;
+  margin-bottom: 2px;
+}
+
+.about-text .catch-en {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  margin: 10px auto;
+}
+
+.slider-top,
+.slider-btm {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.slider-top img,
+.slider-btm img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.slider-top .slick-slide,
+.slider-btm .slick-slide {
+  margin: 0;
+}
+
+.top-02 {
+  object-position: bottom -125px right 0;
+}
+
+.top-03 {
+  object-position: top -200px right 0;
+}
+
+.btm-01 {
+  object-position: top -400px right 0;
+}
+
+.btm-02 {
+  object-position: top -100px right 0;
+}
+
+.btm-03 {
+  object-position: top -200px right 0;
+}
+
+.btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  width: 250px;
+  height: 50px;
+  border: 1px solid #666;
+  color: #333;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 20px;
+  margin: 30px auto;
+  font-size: 1.2rem;
+  transition: 0.25s;
+  letter-spacing: 0.15em;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+/* モーダルウィンドウ */
+.modalwrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.closemodal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.75rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* クリック可能な背景 */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalcontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: flex;
+  max-width: 100%;
+  max-height: 100%;
+  width: 948px;
+  height: 600px;
+  border-radius: 10px;
+}
+
+.profile-img {
+  flex: 1;
+}
+
+.profile-img img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.profile-text {
+  flex: 1;
+  flex-direction: column;
+}
+.myname {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-right: 20px;
+  max-height: 30%;
+}
+
+.myname img {
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+}
+
+.myprofile {
+  padding-top: 30px;
+}
+
+#news {
+  margin-bottom: 50px;
+}
+
+#news .newslist dd {
+  margin-bottom: 30px;
+}
+
+#contact {
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 100%;
+  padding-bottom: 100px;
+}
+
+#contact .sec-title {
+  margin-bottom: 0;
+}
+
+#contact .title-jp {
+  text-align: center;
+  line-height: 1.1;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+#contact .form-box {
+  max-width: 100%;
+  width: 700px;
+  margin: 0 auto;
+}
+
+#contact .form-box form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#contact .form-box label {
+  width: 50%;
+  font-size: 1.15rem;
+  font-weight: 700;
+  height: 30px;
+}
+
+#contact .form-box input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 30px;
+  padding: 5px;
+  border: #999 solid 1px;
+}
+
+#contact .form-box input.btn {
+  width: 50%;
+  height: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 30px;
+  margin-left: 0;
+  cursor: pointer;
+  border: #666 solid 1px;
+}
+
+#contact .form-box textarea {
+  width: 100% !important;
+  min-height: 60px;
+  height: 100px;
+  padding: 5px;
+  resize: none;
+  border: #999 solid 1px;
+}
+
+#footer .site-title a {
+  color: #333;
+}
+
+#footer .footer-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+#footer .footer-nav {
+  list-style: none;
+  margin-right: 100px;
+}
+
+#footer .footer-nav li a {
+  color: #333;
+  font-weight: 600;
+  line-height: 2;
+}
+
+#footer .copyright {
+  margin-top: 50px;
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: none !important;
+  }
+
+  .navigation {
+    justify-content: space-between;
+    padding: 0 10%;
+  }
+
+  .navigation.fixed {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  #works .works-list li {
+    width: 50%;
+    border: solid 1px #fff;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .top-02 {
+    object-position: bottom;
+  }
+
+  .top-03 {
+    object-position: top -20px right 0;
+  }
+
+  .btm-01 {
+    object-position: top -20px right 0;
+  }
+
+  .btm-02 {
+    object-position: top;
+  }
+
+  .btm-03 {
+    object-position: top -20px right 0;
+  }
+
+  #contact .form-box input.btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #works .works-list li {
+    width: 100%;
+    border: solid 1px #fff;
+    margin-bottom: 50px;
+    position: relative;
+  }
+
+  .top-02,
+  .top-03,
+  .btm-01,
+  .btm-02,
+  .btm-03 {
+    object-position: center;
+  }
+}
