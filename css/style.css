@@ -388,15 +388,31 @@ img {
 }
 
 .myprofile {
+  padding: 10px;
   padding-top: 30px;
+  letter-spacing: normal;
+}
+
+.nameis {
+  text-align: left;
+}
+
+.nameis p {
+  margin: 0;
+  font-size: 1rem;
 }
 
 #news {
   margin-bottom: 50px;
 }
 
+#news .newslist{
+  padding: 50px;
+}
+
 #news .newslist dd {
-  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: #666 1px solid;
 }
 
 #contact {
