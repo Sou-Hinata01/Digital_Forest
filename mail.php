@@ -30,7 +30,7 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) {//PHP5.1.0以上の場合の�
 //---------------------------　必須設定　必ず設定してください　-----------------------
 
 //サイトのトップページのURL　※デフォルトでは送信完了後に「トップページへ戻る」ボタンが表示されますので
-$site_top = "index.html";
+$site_top = "https://sou-hinata01.github.io/Digital_Forest/";
 
 //管理者のメールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
 $to = "luminaria0914@gmail.com";
@@ -38,7 +38,7 @@ $to = "luminaria0914@gmail.com";
 //送信元メールアドレス（管理者宛て、及びユーザー宛メールの送信元メールアドレスです）
 //必ず実在するメールアドレスでかつ出来る限り設置先サイトのドメインと同じドメインのメールアドレスとすることを強く推奨します
 //管理者宛てメールの返信先（reply）はユーザーのメールアドレスになります。
-$from = "digital-forest@gmail.com";
+$from = "luminaria0914@gmail.com";
 
 //フォームのメールアドレス入力箇所のname属性の値（name="○○"　の○○部分）
 $Email = "your-mail";
@@ -53,7 +53,7 @@ $Referer_check = 0;
 
 //リファラチェックを「する」場合のドメイン ※設置するサイトのドメインを指定して下さい。
 //もしこの設定が間違っている場合は送信テストですぐに気付けます。
-$Referer_check_domain = "php-factory.net";
+$Referer_check_domain = "https://sou-hinata01.github.io/Digital_Forest/";
 
 /*セッションによるワンタイムトークン（CSRF対策、及びスパム防止）(する=1, しない=0)
 ※ただし、この機能を使う場合は↓の送信確認画面の表示が必須です。（デフォルトではON（1）になっています）
@@ -82,7 +82,7 @@ $jumpPage = 0;
 $thanksPage = "http://xxx.xxxxxxxxx/thanks.html";
 
 // 必須入力項目を設定する(する=1, しない=0)
-$requireCheck = 1;
+$requireCheck = 0;
 
 /* 必須入力項目(入力フォームで指定したname属性の値を指定してください。（上記で1を設定した場合のみ）
 値はシングルクォーテーションで囲み、複数の場合はカンマで区切ってください。フォーム側と順番を合わせると良いです。 
