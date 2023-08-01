@@ -17,7 +17,7 @@ $(".slider-top").slick({
   arrows: false,
   autoplay: true,
   centerMode: true,
-  centerPadding: '20%',
+  centerPadding: "20%",
   autoplaySpeed: 0,
   speed: 9000,
   infinite: true,
@@ -33,7 +33,7 @@ $(".slider-btm").slick({
   arrows: false,
   autoplay: true,
   centerMode: true,
-  centerPadding: '20%',
+  centerPadding: "20%",
   autoplaySpeed: 0,
   speed: 9000,
   infinite: true,
@@ -45,9 +45,8 @@ $(".slider-btm").slick({
   rtl: true,
 });
 
-
 // ナビゲーションバー固定化
-$(window).on("scroll", function(){
+$(window).on("scroll", function () {
   if ($(this).scrollTop() > 400) {
     $(".navigation").addClass("fixed");
 
@@ -55,7 +54,6 @@ $(window).on("scroll", function(){
     $("#works").css({
       "margin-top": "180px",
     });
-
   } else {
     $(".navigation").removeClass("fixed");
 
@@ -66,16 +64,16 @@ $(window).on("scroll", function(){
   }
 });
 
-$(document).ready(function() {
-  // 変数を追加して、スクロール中かどうかを管理します
+$(document).ready(function () {
+  // 変数を追加し、スクロール中かどうかの管理
   var isScrolling = false;
 
   // ナビゲーションバーの高さを取得
-  var navbarHeight = $('.navigation').outerHeight();
+  var navbarHeight = $(".navigation").outerHeight();
 
   // ナビゲーションバーのリンクがクリックされたときのスムーススクロール処理
-  $('.navigation a, .site-title a').on('click', function(event) {
-    // スクロール中はクリックを無効化します
+  $(".navigation a, .site-title a").on("click", function (event) {
+    // スクロール中のクリック無効化
     if (isScrolling) {
       return;
     }
@@ -83,51 +81,66 @@ $(document).ready(function() {
     event.preventDefault();
 
     // クリックされたリンクのhref属性を取得
-    var target = $(this).attr('href');
+    var target = $(this).attr("href");
+    var $targetElement = $(target); // $targetElementを追加
 
-    // 対象要素の位置を取得
-    var targetPosition = $(target).offset().top;
+    // 対象要素が存在するかをチェック
+    if ($targetElement.length) {
+      var targetPosition = $targetElement.offset().top;
+      // ナビゲーションバーの高さを考慮してスクロール位置を調整
+      var adjustedPosition = targetPosition - navbarHeight;
 
-    // ナビゲーションバーの高さを考慮してスクロール位置を調整
-    var adjustedPosition = targetPosition - navbarHeight;
+      // スムーズスクロール
+      isScrolling = true; // スクロール中フラグを立てる
+      $("html, body").animate(
+        {
+          scrollTop: adjustedPosition,
+        },
+        500,
+        function () {
+          isScrolling = false; // スクロールが終了したらフラグを戻す
+        }
+      );
 
-    // スムーススクロール
-    isScrolling = true; // スクロール中フラグを立てる
-    $('html, body').animate({
-      scrollTop: adjustedPosition
-    }, 500, function() {
-      isScrolling = false; // スクロールが終了したらフラグを戻す
-    });
-
-    // URLのハッシュを変更して履歴に残らないようにする
-    history.replaceState(null, null, target);
+      // URLのハッシュを変更して履歴に残らないようにする
+      history.replaceState(null, null, target);
+    }
   });
 });
 
-
+// ページトップリンク
+$(".site-title").click(function () {
+  $("body,html").animate(
+    {
+      scrollTop: 0,
+    },
+    500
+  );
+  return false;
+});
 
 // ハンバーガーメニュー
-$(".hamburger").click(function(){
-  $(this).toggleClass('active');
-})
+$(".hamburger").click(function () {
+  $(this).toggleClass("active");
+});
 
 // モーダルウィンドウ
-function showModal(){
-  $('.modalwrap').fadeIn(300);
-  $('.modalwrap').show();
-  $('.modal-backdrop').fadeIn(300);
-  $('.modal-backdrop').show();
+function showModal() {
+  $(".modalwrap").fadeIn(300);
+  $(".modalwrap").show();
+  $(".modal-backdrop").fadeIn(300);
+  $(".modal-backdrop").show();
 }
 
-function closeModal(){
-  $('.modalwrap').fadeOut(300);
-  $('.modal-backdrop').fadeOut(300);
+function closeModal() {
+  $(".modalwrap").fadeOut(300);
+  $(".modal-backdrop").fadeOut(300);
 }
 
-$('.modal').on('click', function(event){
+$(".modal").on("click", function (event) {
   event.preventDefault();
   showModal();
 });
 
-$('.closemodal').on('click', closeModal);
-$('.modal-backdrop').on('click', closeModal);
+$(".closemodal").on("click", closeModal);
+$(".modal-backdrop").on("click", closeModal);
