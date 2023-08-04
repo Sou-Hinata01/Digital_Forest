@@ -25,20 +25,102 @@
       <h2 class="sec-title">
         Gallery
       </h2>
-      <!-- <p class="pc">サムネイルをクリックすることで全体画像を表示します</p> -->
-      <!-- <p class="sp">サムネイルをタップすることで全体画像を表示します</p> -->
+      <p class="pc">サムネイルをクリックすることで全体画像を表示します</p>
+      <p class="sp">サムネイルをタップすることで全体画像を表示します</p>
       <div class="gallery-list">
         <ul class="list-wrap">
-          <li><a href="#"><img src="img/Magician.png" alt=""></a></li>
-          <li><a href="#"><img src="img/lightfairy01.png" alt=""></a></li>
-          <li><a href="#"><img src="img/ligntfairy02.png" alt=""></a></li>
-          <li><a href="#"><img src="img/Death_Master.PNG" alt=""></a></li>
-          <li><a href="#"><img src="img/Ultimate_Magic.png" alt=""></a></li>
-          <li><a href="#"><img src="img/Halloween.PNG" alt=""></a></li>
-          <li><a href="#"><img src="img/Christmas.PNG" alt=""></a></li>
-          <li><a href="#"><img src="img/Artist.PNG" alt=""></a></li>
+          <li><a href="#" class="modal" data-target="#modal01"><img src="img/Magician.png" alt=""></a></li>
+          <li><a href="#" class="modal" data-target="#modal02"><img src="img/lightfairy01.png" alt=""></a></li>
+          <li><a href="#" class="modal" data-target="#modal03"><img src="img/ligntfairy02.png" alt=""></a></li>
+          <li><a href="#" class="modal" data-target="#modal04"><img src="img/Death_Master.PNG" alt=""></a></li>
+          <li><a href="#" class="modal" data-target="#modal05"><img src="img/Ultimate_Magic.png" alt=""></a></li>
+          <li><a href="#" class="modal" data-target="#modal06"><img src="img/Halloween.PNG" alt=""></a></li>
+          <li><a href="#" class="modal" data-target="#modal07"><img src="img/Christmas.PNG" alt=""></a></li>
+          <li><a href="#" class="modal" data-target="#modal08"><img src="img/Artist.PNG" alt=""></a></li>
         </ul>
       </div>
+      
+      
+      <div class="modalwrap" id="modal01">
+        <div class="modal-backdrop"></div>
+        <div class="modalcontent fullview">
+          <span class="closemodal">&times;</span>
+          <div class="gallery-img">
+            <img src="img/Magician.png" alt="">
+          </div>
+        </div>
+      </div>
+      
+      <div class="modalwrap" id="modal02">
+        <div class="modal-backdrop"></div>
+        <div class="modalcontent fullview">
+          <span class="closemodal">&times;</span>
+          <div class="gallery-img">
+            <img src="img/lightfairy01.png" alt="">
+          </div>
+        </div>
+      </div>
+      
+      <div class="modalwrap" id="modal03">
+        <div class="modal-backdrop"></div>
+        <div class="modalcontent fullview">
+          <span class="closemodal">&times;</span>
+          <div class="gallery-img">
+            <img src="img/ligntfairy02.png" alt="">
+          </div>
+        </div>
+      </div>
+      
+      <div class="modalwrap" id="modal04">
+        <div class="modal-backdrop"></div>
+        <div class="modalcontent fullview">
+          <span class="closemodal">&times;</span>
+          <div class="gallery-img">
+            <img src="img/Death_Master.PNG" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="modalwrap" id="modal05">
+        <div class="modal-backdrop"></div>
+        <div class="modalcontent fullview">
+          <span class="closemodal">&times;</span>
+          <div class="gallery-img">
+            <img src="img/Ultimate_Magic.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="modalwrap" id="modal06">
+        <div class="modal-backdrop"></div>
+        <div class="modalcontent fullview">
+          <span class="closemodal">&times;</span>
+          <div class="gallery-img">
+            <img src="img/Halloween.PNG" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="modalwrap" id="modal07">
+        <div class="modal-backdrop"></div>
+        <div class="modalcontent fullview">
+          <span class="closemodal">&times;</span>
+          <div class="gallery-img">
+            <img src="img/Christmas.PNG" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="modalwrap" id="modal08">
+        <div class="modal-backdrop"></div>
+        <div class="modalcontent fullview">
+          <span class="closemodal">&times;</span>
+          <div class="gallery-img">
+            <img src="img/Artist.PNG" alt="">
+          </div>
+        </div>
+      </div>
+      <a href="index.html" class="btn">Back Home</a>
     </section>
   </main>
   <footer id="footer">
@@ -50,6 +132,6 @@
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/gallery-modal.js"></script>
 </body>
 </html>
