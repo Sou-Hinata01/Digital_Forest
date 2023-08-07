@@ -77,7 +77,6 @@ img {
   height: 80px;
   justify-content: space-around;
   align-items: center;
-  margin: 0 0 100px 0;
 }
 
 .navigation .nav-menu li {
@@ -177,7 +176,7 @@ img {
 .wrap {
   max-width: 1058px;
   margin: 0 auto;
-  padding: 50px 20px;
+  padding: 10px 20px 50px;
   /* overflow: hidden; */
 }
 
@@ -188,6 +187,82 @@ img {
   font-weight: 700;
   margin: 30px auto;
   letter-spacing: 1.5px;
+}
+
+#gallery {
+  text-align: center;
+}
+
+#gallery p {
+  margin-bottom: 50px;
+}
+
+.gallery-list {
+  margin-bottom: 100px;
+}
+
+.modalcontent.fullview {
+  /* コンテンツが画面の90%まで拡大される */
+  max-width: 90%;
+  max-height: 90%;
+
+  /* コンテンツのサイズを画像に合わせて自動調整 */
+  width: auto;
+  height: auto;
+  
+  /* 画像のオーバーフローを隠す */
+  overflow: hidden;
+
+  /* モーダルウィンドウの角丸をリセット */
+  border-radius: 0;
+}
+
+.modalcontent.fullview img {
+  /* 画像がコンテンツサイズを超えないようにする */
+  max-width: 100%;
+  max-height: 100%;
+
+  /* インライン要素の余白削除 */
+  display: block;
+
+  /* 画像サイズの自動調整 */
+  width: auto;
+  height: auto;
+
+  /* コンテンツサイズを超えないようにする */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.list-wrap {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.list-wrap img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.list-wrap li {
+  transition: 0.3s;
+}
+
+.list-wrap li:hover {
+  transform: scale(1.1, 1.1);
+  opacity: 0.8;
+}
+
+.pc {
+  display: inline-block;
+}
+
+.sp {
+  display: none;
 }
 
 #works .works-list {
@@ -365,6 +440,7 @@ img {
 
 .profile-img {
   flex: 1;
+  height: 100%;
 }
 
 .profile-img img {
@@ -521,8 +597,7 @@ img {
 }
 
 /* ギャラリーページ */
-
-.navigation.gallery {
+/* .navigation.gallery {
   display: flex;
   background-image: linear-gradient(
     180deg,
@@ -535,83 +610,9 @@ img {
   margin-bottom: 0;
   justify-content: space-around;
   align-items: center;
-}
+} */
 
-#gallery {
-  text-align: center;
-}
 
-#gallery p {
-  margin-bottom: 50px;
-}
-
-.gallery-list {
-  margin-bottom: 100px;
-}
-
-.modalcontent.fullview {
-  /* コンテンツが画面の90%まで拡大される */
-  max-width: 90%;
-  max-height: 90%;
-
-  /* コンテンツのサイズを画像に合わせて自動調整 */
-  width: auto;
-  height: auto;
-  
-  /* 画像のオーバーフローを隠す */
-  overflow: hidden;
-
-  /* モーダルウィンドウの角丸をリセット */
-  border-radius: 0;
-}
-
-.modalcontent.fullview img {
-  /* 画像がコンテンツサイズを超えないようにする */
-  max-width: 100%;
-  max-height: 100%;
-
-  /* インライン要素の余白削除 */
-  display: block;
-
-  /* 画像サイズの自動調整 */
-  width: auto;
-  height: auto;
-
-  /* コンテンツサイズを超えないようにする */
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.list-wrap {
-  display: flex;
-  list-style: none;
-  gap: 50px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.list-wrap img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.list-wrap li {
-  transition: 0.3s;
-}
-
-.list-wrap li:hover {
-  transform: scale(1.1, 1.1);
-  opacity: 0.8;
-}
-
-.pc {
-  display: inline-block;
-}
-
-.sp {
-  display: none;
-}
 
 @media screen and (max-width: 768px) {
   .pc {

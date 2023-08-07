@@ -51,14 +51,14 @@ $(window).on("scroll", function () {
     $(".navigation").addClass("fixed");
 
     // fixedに変更された後のスタイルを調整
-    $("#works").css({
-      "margin-top": "180px",
+    $("#gallery").css({
+      "margin-top": "80px",
     });
   } else {
     $(".navigation").removeClass("fixed");
 
     // 元のflexに戻った時のスタイル
-    $("#works").css({
+    $("#gallery").css({
       "margin-top": "auto",
     });
   }
@@ -125,22 +125,41 @@ $(".hamburger").click(function () {
 });
 
 // モーダルウィンドウ
-function showModal() {
-  $(".modalwrap").fadeIn(300);
-  $(".modalwrap").show();
+function showModal(target) {
+  $(target).fadeIn(300);
   $(".modal-backdrop").fadeIn(300);
-  $(".modal-backdrop").show();
 }
 
-function closeModal() {
-  $(".modalwrap").fadeOut(300);
+function closeModal(target) {
+  $(target).fadeOut(300);
   $(".modal-backdrop").fadeOut(300);
 }
 
 $(".modal").on("click", function (event) {
   event.preventDefault();
-  showModal();
+  const targetModal = $(this).data("target");
+  showModal(targetModal);
 });
 
-$(".closemodal").on("click", closeModal);
-$(".modal-backdrop").on("click", closeModal);
+$(".closemodal").on("click", function (event) {
+  const targetModal = $(this).closest(".modalwrap");
+  closeModal(targetModal);
+});
+
+$(".modal-backdrop").on("click", function (event) {
+  closeModal(".modalwrap");
+});
+
+// Vanta.fog
+VANTA.FOG({
+  el: "#fog",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0xf7ffe9,
+  midtoneColor: 0xfcfcfc,
+  lowlightColor: 0xebffd7,
+  baseColor: 0xffffff
+});
