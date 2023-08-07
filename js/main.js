@@ -160,6 +160,6 @@ VANTA.FOG({
   minWidth: 200.00,
   highlightColor: 0xf7ffe9,
   midtoneColor: 0xfcfcfc,
-  lowlightColor: 0xebffd7,
+  lowlightColor: 0x98fc63,
   baseColor: 0xffffff
 });
