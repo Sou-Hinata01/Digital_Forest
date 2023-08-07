@@ -124,15 +124,38 @@ $(".hamburger").click(function () {
   $(this).toggleClass("active");
 });
 
+// スクロール禁止の関数
+function disableScroll() {
+  // スクロールを無効化するためのCSSをbodyに追加
+  $('body').css('overflow', 'hidden');
+}
+
+// スクロール許可の関数
+function enableScroll() {
+  // スクロールを有効化するためのCSSをbodyから削除
+  $('body').css('overflow', 'auto');
+}
+
+
 // モーダルウィンドウ
 function showModal(target) {
   $(target).fadeIn(300);
   $(".modal-backdrop").fadeIn(300);
+  // スクロールを禁止
+  disableScroll();
+  $("#gallery, #about").css({
+    "z-index": "10",
+  });
 }
 
 function closeModal(target) {
   $(target).fadeOut(300);
   $(".modal-backdrop").fadeOut(300);
+  // スクロールを許可
+  enableScroll();
+  $("#gallery, #about").css({
+    "z-index": "1",
+  });
 }
 
 $(".modal").on("click", function (event) {

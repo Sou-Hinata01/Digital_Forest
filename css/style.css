@@ -118,7 +118,7 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 10;
 }
 
 /* ハンバーガーメニュー */
@@ -189,82 +189,6 @@ img {
   letter-spacing: 1.5px;
 }
 
-#gallery {
-  text-align: center;
-}
-
-#gallery p {
-  margin-bottom: 50px;
-}
-
-.gallery-list {
-  margin-bottom: 100px;
-}
-
-.modalcontent.fullview {
-  /* コンテンツが画面の90%まで拡大される */
-  max-width: 90%;
-  max-height: 90%;
-
-  /* コンテンツのサイズを画像に合わせて自動調整 */
-  width: auto;
-  height: auto;
-  
-  /* 画像のオーバーフローを隠す */
-  overflow: hidden;
-
-  /* モーダルウィンドウの角丸をリセット */
-  border-radius: 0;
-}
-
-.modalcontent.fullview img {
-  /* 画像がコンテンツサイズを超えないようにする */
-  max-width: 100%;
-  max-height: 100%;
-
-  /* インライン要素の余白削除 */
-  display: block;
-
-  /* 画像サイズの自動調整 */
-  width: auto;
-  height: auto;
-
-  /* コンテンツサイズを超えないようにする */
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.list-wrap {
-  display: flex;
-  list-style: none;
-  gap: 50px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.list-wrap img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.list-wrap li {
-  transition: 0.3s;
-}
-
-.list-wrap li:hover {
-  transform: scale(1.1, 1.1);
-  opacity: 0.8;
-}
-
-.pc {
-  display: inline-block;
-}
-
-.sp {
-  display: none;
-}
-
 #works .works-list {
   display: flex;
   list-style: none;
@@ -299,11 +223,12 @@ img {
   position: absolute;
   bottom: 4px;
   left: 10px;
-  z-index: 5;
+  z-index: 3;
 }
 
 #about {
   flex-direction: column;
+  z-index: 8;
 }
 
 .about-text {
@@ -422,6 +347,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 6;
 }
 
 .modalcontent {
@@ -436,6 +362,7 @@ img {
   align-items: center; /* コンテンツを垂直方向に中央に配置 */
   justify-content: center; /* コンテンツを水平方向に中央に配置 */
   border-radius: 10px;
+  z-index: 6;
 }
 
 .profile-img {
@@ -612,6 +539,83 @@ img {
   align-items: center;
 } */
 
+#gallery {
+  text-align: center;
+  z-index: 9;
+}
+
+#gallery p {
+  margin-bottom: 50px;
+}
+
+.gallery-list {
+  margin-bottom: 100px;
+}
+
+.modalcontent.fullview {
+  /* コンテンツが画面の90%まで拡大される */
+  max-width: 90%;
+  max-height: 90%;
+
+  /* コンテンツのサイズを画像に合わせて自動調整 */
+  width: auto;
+  height: auto;
+  
+  /* 画像のオーバーフローを隠す */
+  overflow: hidden;
+
+  /* モーダルウィンドウの角丸をリセット */
+  border-radius: 0;
+  z-index: 6;
+}
+
+.modalcontent.fullview img {
+  /* 画像がコンテンツサイズを超えないようにする */
+  max-width: 100%;
+  max-height: 100%;
+
+  /* インライン要素の余白削除 */
+  display: block;
+
+  /* 画像サイズの自動調整 */
+  width: auto;
+  height: auto;
+
+  /* コンテンツサイズを超えないようにする */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.list-wrap {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.list-wrap img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.list-wrap li {
+  transition: 0.3s;
+}
+
+.list-wrap li:hover {
+  transform: scale(1.1, 1.1);
+  opacity: 0.8;
+}
+
+.pc {
+  display: inline-block;
+}
+
+.sp {
+  display: none;
+}
 
 
 @media screen and (max-width: 768px) {
@@ -638,7 +642,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 8;
   }
 
   .hamburger {
