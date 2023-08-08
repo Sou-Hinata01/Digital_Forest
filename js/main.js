@@ -142,7 +142,7 @@ function showModal(target) {
   $(target).fadeIn(300);
   $(".modal-backdrop").fadeIn(300);
   // スクロールを禁止
-  disableScroll();
+  // disableScroll();
   $("#gallery, #about").css({
     "z-index": "10",
   });
@@ -152,7 +152,7 @@ function closeModal(target) {
   $(target).fadeOut(300);
   $(".modal-backdrop").fadeOut(300);
   // スクロールを許可
-  enableScroll();
+  // enableScroll();
   $("#gallery, #about").css({
     "z-index": "1",
   });

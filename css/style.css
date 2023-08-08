@@ -359,7 +359,6 @@ img {
   display: flex;
   width: 948px;
   height: 600px;
-  align-items: center; /* コンテンツを垂直方向に中央に配置 */
   justify-content: center; /* コンテンツを水平方向に中央に配置 */
   border-radius: 10px;
   z-index: 6;
@@ -567,6 +566,7 @@ img {
   /* モーダルウィンドウの角丸をリセット */
   border-radius: 0;
   z-index: 6;
+  align-items: center; /* コンテンツを垂直方向に中央に配置 */
 }
 
 .modalcontent.fullview img {
@@ -580,10 +580,6 @@ img {
   /* 画像サイズの自動調整 */
   width: auto;
   height: auto;
-
-  /* コンテンツサイズを超えないようにする */
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .list-wrap {
