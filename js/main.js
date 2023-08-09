@@ -175,7 +175,7 @@ $(".modal-backdrop").on("click", function (event) {
 
 // Vanta.fog
 VANTA.FOG({
-  el: "#fog",
+  el: "#bg",
   mouseControls: true,
   touchControls: true,
   gyroControls: false,

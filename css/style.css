@@ -27,6 +27,13 @@ img {
   height: auto;
 }
 
+#bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .mv-slider {
   position: relative;
   z-index: 1;
