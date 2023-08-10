@@ -1,70 +1,76 @@
 // メインビジュアルカルーセル
-$(".mv-slider").slick({
-  fade: true,
-  autoplay: true,
-  arrows: false,
-  dots: false,
-  autoplaySpeed: 5000,
-  speed: 1500,
-  infinite: true,
-  pauseOnFocus: false,
-  pauseOnHover: false,
-  touchMove: false,
+$(function() {
+  $(".mv-slider").slick({
+    fade: true,
+    autoplay: true,
+    arrows: false,
+    dots: false,
+    autoplaySpeed: 5000,
+    speed: 1500,
+    infinite: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    touchMove: false,
+  });
+
+  // Aboutカルーセル上部
+  $(".slider-top").slick({
+    arrows: false,
+    autoplay: true,
+    centerMode: true,
+    centerPadding: "20%",
+    autoplaySpeed: 0,
+    speed: 9000,
+    infinite: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    cssEase: "linear",
+    slideToShow: 1,
+    slideToScroll: 1,
+  });
+
+  // Aboutカルーセル下部
+  $(".slider-btm").slick({
+    arrows: false,
+    autoplay: true,
+    centerMode: true,
+    centerPadding: "20%",
+    autoplaySpeed: 0,
+    speed: 9000,
+    infinite: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    cssEase: "linear",
+    slideToShow: 1,
+    slideToScroll: 1,
+    rtl: true,
+  });
 });
 
-// Aboutカルーセル上部
-$(".slider-top").slick({
-  arrows: false,
-  autoplay: true,
-  centerMode: true,
-  centerPadding: "20%",
-  autoplaySpeed: 0,
-  speed: 9000,
-  infinite: true,
-  pauseOnFocus: false,
-  pauseOnHover: false,
-  cssEase: "linear",
-  slideToShow: 1,
-  slideToScroll: 1,
-});
-
-// Aboutカルーセル下部
-$(".slider-btm").slick({
-  arrows: false,
-  autoplay: true,
-  centerMode: true,
-  centerPadding: "20%",
-  autoplaySpeed: 0,
-  speed: 9000,
-  infinite: true,
-  pauseOnFocus: false,
-  pauseOnHover: false,
-  cssEase: "linear",
-  slideToShow: 1,
-  slideToScroll: 1,
-  rtl: true,
-});
 
 // ナビゲーションバー固定化
-$(window).on("scroll", function () {
-  if ($(this).scrollTop() > 400) {
-    $(".navigation").addClass("fixed");
+$(function() {
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 400) {
+      $(".navigation").addClass("fixed");
 
-    // fixedに変更された後のスタイルを調整
-    $("#gallery").css({
-      "margin-top": "80px",
-    });
-  } else {
-    $(".navigation").removeClass("fixed");
+      // fixedに変更された後のスタイルを調整
+      $("#gallery").css({
+        "margin-top": "80px",
+      });
+    } else {
+      $(".navigation").removeClass("fixed");
 
-    // 元のflexに戻った時のスタイル
-    $("#gallery").css({
-      "margin-top": "auto",
-    });
-  }
+      // 元のflexに戻った時のスタイル
+      $("#gallery").css({
+        "margin-top": "auto",
+      });
+    }
+  });
 });
 
-$(document).ready(function () {
+
+$(function() {
   // 変数を追加し、スクロール中かどうかの管理
   var isScrolling = false;
 
@@ -124,38 +130,15 @@ $(".hamburger").click(function () {
   $(this).toggleClass("active");
 });
 
-// スクロール禁止の関数
-function disableScroll() {
-  // スクロールを無効化するためのCSSをbodyに追加
-  $('body').css('overflow', 'hidden');
-}
-
-// スクロール許可の関数
-function enableScroll() {
-  // スクロールを有効化するためのCSSをbodyから削除
-  $('body').css('overflow', 'auto');
-}
-
-
 // モーダルウィンドウ
 function showModal(target) {
   $(target).fadeIn(300);
   $(".modal-backdrop").fadeIn(300);
-  // スクロールを禁止
-  // disableScroll();
-  $("#gallery, #about").css({
-    "z-index": "10",
-  });
 }
 
 function closeModal(target) {
   $(target).fadeOut(300);
   $(".modal-backdrop").fadeOut(300);
-  // スクロールを許可
-  // enableScroll();
-  $("#gallery, #about").css({
-    "z-index": "1",
-  });
 }
 
 $(".modal").on("click", function (event) {

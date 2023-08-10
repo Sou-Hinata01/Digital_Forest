@@ -196,25 +196,131 @@ img {
   letter-spacing: 1.5px;
 }
 
-#works .works-list {
+#gallery {
+  text-align: center;
+  z-index: 9;
+}
+
+#gallery p {
+  margin-bottom: 50px;
+}
+
+.gallery-list {
+  margin-bottom: 50px;
+}
+
+.modalcontent.fullview {
+  /* コンテンツが画面の90%まで拡大される */
+  max-width: 90%;
+  max-height: 90%;
+
+  /* コンテンツのサイズを画像に合わせて自動調整 */
+  width: auto;
+  height: auto;
+  
+  /* 画像のオーバーフローを隠す */
+  overflow: hidden;
+
+  /* モーダルウィンドウの角丸をリセット */
+  border-radius: 0;
+  z-index: 6;
+  align-items: center; /* コンテンツを垂直方向に中央に配置 */
+}
+
+.modalcontent.fullview img {
+  /* 画像がコンテンツサイズを超えないようにする */
+  max-width: 100%;
+  max-height: 100%;
+
+  /* インライン要素の余白削除 */
+  display: block;
+
+  /* 画像サイズの自動調整 */
+  width: auto;
+  height: auto;
+}
+
+.list-wrap {
   display: flex;
   list-style: none;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.list-wrap img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.list-wrap li {
+  transition: 0.3s;
+}
+
+.list-wrap li:hover {
+  transform: scale(1.1, 1.1);
+  opacity: 0.8;
+}
+
+.pc {
+  display: inline-block;
+}
+
+.sp {
+  display: none;
+}
+
+
+#works {
+  align-items: center;
+  justify-content: center;
+}
+
+#works .works-list {
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  list-style: none;
+  
 }
 
 #works .works-list li {
   width: 33%;
-  border: solid 1px #fff;
-  margin-bottom: 50px;
-  position: relative;
+  margin-bottom: 30px;
 }
 
-#works .works-list li a {
-  display: block;
+.card {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  flex-direction: column;
 }
 
-#works .works-list li a::after {
+.card .card-content img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .card-content p {
+  color: #fff;
+  font-weight: 600;
+  position: absolute;
+  bottom: 4px;
+  left: 10px;
+  z-index: 3;
+}
+
+.card .card-content::after {
   content: "";
   box-shadow: 0 -30px 15px -1px #666 inset;
   position: absolute;
@@ -222,15 +328,6 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-#works .works-list .workname {
-  color: #fff;
-  font-weight: 600;
-  position: absolute;
-  bottom: 4px;
-  left: 10px;
-  z-index: 3;
 }
 
 #about {
@@ -528,98 +625,6 @@ img {
   font-size: 0.875rem;
   text-align: center;
 }
-
-/* ギャラリーページ */
-/* .navigation.gallery {
-  display: flex;
-  background-image: linear-gradient(
-    180deg,
-    rgba(197, 229, 255, 1),
-    rgba(215, 241, 236, 1) 46%,
-    rgba(235, 255, 214, 1) 91%
-  );
-  flex-direction: row;
-  height: 80px;
-  margin-bottom: 0;
-  justify-content: space-around;
-  align-items: center;
-} */
-
-#gallery {
-  text-align: center;
-  z-index: 9;
-}
-
-#gallery p {
-  margin-bottom: 50px;
-}
-
-.gallery-list {
-  margin-bottom: 100px;
-}
-
-.modalcontent.fullview {
-  /* コンテンツが画面の90%まで拡大される */
-  max-width: 90%;
-  max-height: 90%;
-
-  /* コンテンツのサイズを画像に合わせて自動調整 */
-  width: auto;
-  height: auto;
-  
-  /* 画像のオーバーフローを隠す */
-  overflow: hidden;
-
-  /* モーダルウィンドウの角丸をリセット */
-  border-radius: 0;
-  z-index: 6;
-  align-items: center; /* コンテンツを垂直方向に中央に配置 */
-}
-
-.modalcontent.fullview img {
-  /* 画像がコンテンツサイズを超えないようにする */
-  max-width: 100%;
-  max-height: 100%;
-
-  /* インライン要素の余白削除 */
-  display: block;
-
-  /* 画像サイズの自動調整 */
-  width: auto;
-  height: auto;
-}
-
-.list-wrap {
-  display: flex;
-  list-style: none;
-  gap: 50px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.list-wrap img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.list-wrap li {
-  transition: 0.3s;
-}
-
-.list-wrap li:hover {
-  transform: scale(1.1, 1.1);
-  opacity: 0.8;
-}
-
-.pc {
-  display: inline-block;
-}
-
-.sp {
-  display: none;
-}
-
 
 @media screen and (max-width: 768px) {
   .pc {
