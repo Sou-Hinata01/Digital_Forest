@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+input {
+  font-size: 100%;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+body {
+  font-size: 1.15rem;
+  background-color: #fff;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
