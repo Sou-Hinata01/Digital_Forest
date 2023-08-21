@@ -77,8 +77,9 @@ img {
   background-image: linear-gradient(
     180deg,
     rgba(197, 229, 255, 1),
-    rgba(215, 241, 236, 1) 46%,
-    rgba(235, 255, 214, 1) 91%
+    rgba(215, 241, 236, 1) 50%,
+    rgba(226, 249, 224, 0.75) 75%,
+    rgba(235, 255, 214, 0)
   );
   flex-direction: row;
   height: 80px;
@@ -217,7 +218,7 @@ img {
   /* コンテンツのサイズを画像に合わせて自動調整 */
   width: auto;
   height: auto;
-  
+
   /* 画像のオーバーフローを隠す */
   overflow: hidden;
 
@@ -271,7 +272,6 @@ img {
   display: none;
 }
 
-
 #works {
   align-items: center;
   justify-content: center;
@@ -282,7 +282,6 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
   list-style: none;
-  
 }
 
 #works .works-list li {
@@ -596,10 +595,11 @@ img {
 
 #footer {
   background-image: linear-gradient(
-    180deg,
-    rgba(235, 255, 214, 1),
-    rgba(215, 241, 236, 1) 46%,
-    rgba(197, 229, 255, 1) 91%
+    0deg,
+    rgba(197, 229, 255, 1),
+    rgba(215, 241, 236, 1) 50%,
+    rgba(226, 249, 224, 0.8) 75%,
+    rgba(235, 255, 214, 0)
   );
   padding: 30px 30px 10px 30px;
 }
