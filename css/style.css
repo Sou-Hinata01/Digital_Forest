@@ -210,6 +210,15 @@ img {
   margin-bottom: 50px;
 }
 
+.animate-me {
+  transform: scale(0.5, 0.5);
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.animate-me.active {
+  transform: scale(1.0, 1.0);
+}
+
 .modalcontent.fullview {
   /* コンテンツが画面の90%まで拡大される */
   max-width: 90%;

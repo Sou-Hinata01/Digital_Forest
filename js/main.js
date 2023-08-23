@@ -1,5 +1,13 @@
-// メインビジュアルカルーセル
-$(function() {
+$(function () {
+  $(".animate-me").on("inview", function (event, isInView) {
+    if (isInView) {
+      $(this).addClass("active"); // 画像が画面内に表示されたら、アニメーションクラスを追加
+    }
+  });
+});
+
+$(function () {
+  // メインビジュアルカルーセル
   $(".mv-slider").slick({
     fade: true,
     autoplay: true,
@@ -45,11 +53,9 @@ $(function() {
     slideToScroll: 1,
     rtl: true,
   });
-});
 
+  // ナビゲーションバー固定化
 
-// ナビゲーションバー固定化
-$(function() {
   $(window).on("scroll", function () {
     if ($(this).scrollTop() > 400) {
       $(".navigation").addClass("fixed");
@@ -69,49 +75,46 @@ $(function() {
   });
 });
 
+// 変数を追加し、スクロール中かどうかの管理
+var isScrolling = false;
 
-$(function() {
-  // 変数を追加し、スクロール中かどうかの管理
-  var isScrolling = false;
+// ナビゲーションバーの高さを取得
+var navbarHeight = $(".navigation").outerHeight();
 
-  // ナビゲーションバーの高さを取得
-  var navbarHeight = $(".navigation").outerHeight();
+// ナビゲーションバーのリンクがクリックされたときのスムーススクロール処理
+$(".navigation a, .site-title a").on("click", function (event) {
+  // スクロール中のクリック無効化
+  if (isScrolling) {
+    return;
+  }
 
-  // ナビゲーションバーのリンクがクリックされたときのスムーススクロール処理
-  $(".navigation a, .site-title a").on("click", function (event) {
-    // スクロール中のクリック無効化
-    if (isScrolling) {
-      return;
-    }
+  event.preventDefault();
 
-    event.preventDefault();
+  // クリックされたリンクのhref属性を取得
+  var target = $(this).attr("href");
+  var $targetElement = $(target); // $targetElementを追加
 
-    // クリックされたリンクのhref属性を取得
-    var target = $(this).attr("href");
-    var $targetElement = $(target); // $targetElementを追加
+  // 対象要素が存在するかをチェック
+  if ($targetElement.length) {
+    var targetPosition = $targetElement.offset().top;
+    // ナビゲーションバーの高さを考慮してスクロール位置を調整
+    var adjustedPosition = targetPosition - navbarHeight;
 
-    // 対象要素が存在するかをチェック
-    if ($targetElement.length) {
-      var targetPosition = $targetElement.offset().top;
-      // ナビゲーションバーの高さを考慮してスクロール位置を調整
-      var adjustedPosition = targetPosition - navbarHeight;
+    // スムーズスクロール
+    isScrolling = true; // スクロール中フラグを立てる
+    $("html, body").animate(
+      {
+        scrollTop: adjustedPosition,
+      },
+      500,
+      function () {
+        isScrolling = false; // スクロールが終了したらフラグを戻す
+      }
+    );
 
-      // スムーズスクロール
-      isScrolling = true; // スクロール中フラグを立てる
-      $("html, body").animate(
-        {
-          scrollTop: adjustedPosition,
-        },
-        500,
-        function () {
-          isScrolling = false; // スクロールが終了したらフラグを戻す
-        }
-      );
-
-      // URLのハッシュを変更して履歴に残らないようにする
-      history.replaceState(null, null, target);
-    }
-  });
+    // URLのハッシュを変更して履歴に残らないようにする
+    history.replaceState(null, null, target);
+  }
 });
 
 // ページトップリンク
@@ -162,11 +165,11 @@ VANTA.FOG({
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
+  minHeight: 200.0,
+  minWidth: 200.0,
   highlightColor: 0xf7ffe9,
   midtoneColor: 0xfcfcfc,
   lowlightColor: 0x98fc63,
   baseColor: 0xffffff,
-  speed: 2.60,
+  speed: 2.6,
 });
