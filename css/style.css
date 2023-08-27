@@ -212,7 +212,7 @@ img {
 
 .animate-me {
   transform: scale(0.5, 0.5);
-  transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .animate-me.active {
@@ -265,7 +265,7 @@ img {
 }
 
 .list-wrap li {
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .list-wrap li:hover {
