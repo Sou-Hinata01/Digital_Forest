@@ -614,12 +614,13 @@ img {
     rgba(235, 255, 214, 0)
   );
   padding: 30px 30px 10px 30px;
+  margin-top: -8vh;
 }
 
 #footer .footer-logo {
   display: flex;
   flex-direction: row-reverse;
-  margin-right: 300px;
+  margin-right: 150px;
 }
 
 #footer .site-title {
