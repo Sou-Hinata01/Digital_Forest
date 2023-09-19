@@ -1,10 +1,4 @@
 $(function () {
-  $(".slider-top li,.slider-btm li").on("inview", function (event, isInView) {
-    if (isInView) {
-      $(this).addClass("active"); // 画像が画面内に表示されたら、アニメーションクラスを追加
-    }
-  });
-
   $(".slider-top").slick({
     arrows: false,
     autoplay: true,
