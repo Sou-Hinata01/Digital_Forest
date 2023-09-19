@@ -41,7 +41,7 @@ ul li:not(.slider-top li, .slider-btm li)::before {
   position: fixed;
   width: 100vw;
   height: 200vh;
-  background-image: url(../img/gsf01-2.PNG) !important;
+  background-image: url(../img/gsf01-2.png) !important;
   background-repeat: no-repeat;
   background-position: 20% 0%;
   z-index: -1;
