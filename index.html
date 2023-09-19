@@ -4,274 +4,381 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css"
-    href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/94d419d03c.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/main.js"></script>
   <title>Digital Forest</title>
 </head>
 
 <body>
-  <div id="bg"></div>
-  <header id="header">
-    <ul class="mv-slider">
-      <li class="slide mainvisual01"></li>
-      <li class="slide mainvisual02"></li>
-      <li class="slide mainvisual03"></li>
-    </ul>
-    <div class="navigation">
-      <h1 class="site-title"><a href="#">Digital Forest</a></h1>
-      <ul class="nav-menu">
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
+  <div class="bg">
+  </div>
+  <header>
+    <nav class="nav-menu">
+      <a href="#" class="nav-top">
+        <p class="menu-text en">
+          TOP<br>
+        </p>
+        <p class="menu-text ja">
+          トップ
+        </p>
+      </a>
+      <a href="#profile">
+        <p class="menu-text en">
+          PROFILE<br>
+        </p>
+        <p class="menu-text ja">
+          プロフィール
+        </p>
+      </a> <a href="#works">
+        <p class="menu-text en">
+          WORKS<br>
+        </p>
+        <p class="menu-text ja">
+          お仕事実績
+        </p>
+      </a> <a href="#gallery">
+        <p class="menu-text en">
+          GALLERY<br>
+        </p>
+        <p class="menu-text ja">
+          イラスト一覧
+        </p>
+      </a> <a href="#contact">
+        <p class="menu-text en">
+          CONTACT<br>
+        </p>
+        <p class="menu-text ja">
+          お問い合わせ
+        </p>
+      </a>
+    </nav>
   </header>
   <main>
-    <section id="gallery" class="wrap">
-      <h2 class="sec-title">
-        Gallery
-      </h2>
-      <p class="pc">サムネイルをクリックすることで全体画像を表示します</p>
-      <p class="sp">サムネイルをタップすることで全体画像を表示します</p>
-      <div class="gallery-list">
-        <ul class="list-wrap">
-          <li><a href="#" class="modal" data-target="#modal01"><img src="img/Magician.png" alt="" class="animate-me" ></a></li>
-          <li><a href="#" class="modal" data-target="#modal02"><img src="img/lightfairy01.png" alt="" class="animate-me" ></a></li>
-          <li><a href="#" class="modal" data-target="#modal03"><img src="img/ligntfairy02.png" alt="" class="animate-me" ></a></li>
-          <li><a href="#" class="modal" data-target="#modal04"><img src="img/Death_Master.PNG" alt="" class="animate-me" ></a></li>
-          <li><a href="#" class="modal" data-target="#modal05"><img src="img/Ultimate_Magic.png" alt="" class="animate-me" ></a></li>
-          <li><a href="#" class="modal" data-target="#modal06"><img src="img/Halloween.PNG" alt="" class="animate-me" ></a></li>
-          <li><a href="#" class="modal" data-target="#modal07"><img src="img/Christmas.PNG" alt="" class="animate-me" ></a></li>
-          <li><a href="#" class="modal" data-target="#modal08"><img src="img/Artist.PNG" alt="" class="animate-me" ></a></li>
-        </ul>
+    <div class="top">
+      <div class="upline"></div>
+      <div class="site-title">
+        <img src="img/logo.png" alt="">
+        <h1>
+          <span class="en">DIGITAL FOREST</span>
+          <span class="ja">雛菊コトカ イラストポートフォリオサイト</span>
+        </h1>
       </div>
-
-      <div class="modalwrap" id="modal01">
-        <div class="modal-backdrop"></div>
-        <div class="modalcontent fullview">
-          <span class="closemodal">&times;</span>
-          <div class="gallery-img">
-            <img src="img/Magician.png" alt="">
-          </div>
+      <div class="mv-img">
+        <div class="img-01 mv-box">
+          <img src="img/gsf01.PNG" alt="">
+        </div>
+        <div class="img-02 mv-box">
+          <img src="img/dqf01.PNG" alt="">
+        </div>
+        <div class="img-03 mv-box">
+          <img src="img/archemist02.png" alt="">
+        </div>
+        <div class="img-04 mv-box">
+          <img src="img/artist02.png" alt="">
+        </div>
+        <div class="img-05 mv-box">
+          <img src="img/gsf02.png" alt="">
+        </div>
+        <div class="img-06 mv-box">
+          <img src="img/magician01.png" alt="">
         </div>
       </div>
-
-      <div class="modalwrap" id="modal02">
-        <div class="modal-backdrop"></div>
-        <div class="modalcontent fullview">
-          <span class="closemodal">&times;</span>
-          <div class="gallery-img">
-            <img src="img/lightfairy01.png" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="modalwrap" id="modal03">
-        <div class="modal-backdrop"></div>
-        <div class="modalcontent fullview">
-          <span class="closemodal">&times;</span>
-          <div class="gallery-img">
-            <img src="img/ligntfairy02.png" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="modalwrap" id="modal04">
-        <div class="modal-backdrop"></div>
-        <div class="modalcontent fullview">
-          <span class="closemodal">&times;</span>
-          <div class="gallery-img">
-            <img src="img/Death_Master.PNG" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="modalwrap" id="modal05">
-        <div class="modal-backdrop"></div>
-        <div class="modalcontent fullview">
-          <span class="closemodal">&times;</span>
-          <div class="gallery-img">
-            <img src="img/Ultimate_Magic.png" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="modalwrap" id="modal06">
-        <div class="modal-backdrop"></div>
-        <div class="modalcontent fullview">
-          <span class="closemodal">&times;</span>
-          <div class="gallery-img">
-            <img src="img/Halloween.PNG" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="modalwrap" id="modal07">
-        <div class="modal-backdrop"></div>
-        <div class="modalcontent fullview">
-          <span class="closemodal">&times;</span>
-          <div class="gallery-img">
-            <img src="img/Christmas.PNG" alt="">
-          </div>
-        </div>
-      </div>
-
-      <div class="modalwrap" id="modal08">
-        <div class="modal-backdrop"></div>
-        <div class="modalcontent fullview">
-          <span class="closemodal">&times;</span>
-          <div class="gallery-img">
-            <img src="img/Artist.PNG" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="works" class="wrap">
-      <h2 class="sec-title">
-        Works
-      </h2>
-      <ul class="works-list">
-        <li>
-          <a href="accordion/index.html" target="_blank">
-            <div class="card">
-              <div class="card-content">
-                <img src="img/thumbnail.png" alt="">
-                <p>アコーディオンメニュー（JSなし）</p>
-              </div>
+      <div class="news">
+        <div>
+          <h2 class="en">NEWS</h2>
+          <dl class="news-list">
+            <div class="column">
+              <dt class="en">2023.09.19</dt>
+              <dd class="ja">
+                サイトを大幅リニューアル
+              </dd>
             </div>
-          </a>
-        </li>
-        <li>
-          <a href="House/index.html" target="_blank">
-            <div class="card">
-              <div class="card-content">
-                <img src="img/thumbnail02.png" alt="">
-                <p>サイトサンプル01</p>
-              </div>
+            <div class="column">
+              <dt class="en">2023.07.31</dt>
+              <dd class="ja">
+                ポートフォリオサイトオープン
+              </dd>
             </div>
-          </a>
-        </li>
-      </ul>
-      <!-- <a href="" class="btn">Learn More</a> -->
-    </section>
-    <section id="about">
+          </dl>
+        </div>
+
+      </div>
+    </div>
+
+    <div>
       <ul class="slider-top">
-        <li><img src="img/lightfairy01.png" alt="" class="top-01"></li>
-        <li><img src="img/Halloween.PNG" alt="" class="top-02"></li>
-        <li><img src="img/Archemist.PNG" alt="" class="top-03"></li>
+        <li><img src="img/artist01.png" alt=""></li>
+        <li><img src="img/archemist01.png" alt=""></li>
+        <li><img src="img/magician02.png" alt=""></li>
+        <li><img src="img/saint01.png" alt=""></li>
+        <li><img src="img/beast01.png" alt=""></li>
       </ul>
-      <div class="about-text">
-        <h3 class="catch-jp">自分を表現する手段</h3>
-        <h3 class="catch-en">Means of expressing oneself</h3>
-        <p>
-          私にとって『ものづくり』は、『自分を表現する手段』です。<br>
-          絵を描くことも、文章を書くことも、Webサイトの制作も私にとってはその一つにすぎません。<br>
-        </p>
-        <p>
-          自分が自分であるために、自分にしかできないことを最大限にアピールする。<br>
-          それが『ものづくり』をするにあたって重要なことだと私は思っています。
-        </p>
-        <a href="#" class="modal btn" data-target="#modal-pf">About Me</a>
-
-        <div class="modalwrap" id="modal-pf">
-          <div class="modal-backdrop"></div>
-          <div class="modalcontent">
-            <span class="closemodal">&times;</span>
-            <div class="profile-img">
-              <img src="img/lightfairy01.png" alt="profile">
-            </div>
-            <div class="profile-text">
-              <div class="myname">
-                <img src="img/icon.PNG" alt="">
-                <div class="nameis">
-                  <h3>雛菊 コトカ</h3>
-                  <p>Hinagiku Kotoka</p>
+    </div>
+    <div id="profile" class="wrap">
+      <div class="profile">
+        <div>
+          <h2 class="sec-title">
+            <span class="en">PROFILE</span>
+            <span class="ja">プロフィール</span>
+          </h2>
+        </div>
+        <div>
+          <div class="pf-main">
+            <img src="img/pf.PNG" alt="">
+            <div class="pf-dec">
+              <div class="pf-name">
+                <p class="name-ja ja">雛菊 コトカ</p>
+                <p class="name-en ja">Margherita4811</p>
+              </div>
+              <div class="pf-text ja">
+                <p>私にとって『ものづくり』は、『自分を表現する手段』です。<br>
+                  絵を描くことも、文章を書くことも、Webサイトの制作も私にとってはその一つにすぎません。<br>
+                  自分が自分であるために、自分にしかできないことを最大限にアピールする。<br>
+                  それが『ものづくり』をするにあたって重要なことだと私は思っています。</p>
+              </div>
+              <div class="pf-sns">
+                <div class="twitter">
+                  <div>
+                    <i class="fa-brands fa-twitter"></i>
+                  </div>
+                  <p class="en">Twitter</p>
+                </div>
+                <div class="pixiv">
+                  <div>
+                    <i class="fa-solid fa-paintbrush"></i>
+                  </div>
+                  <p class="en">pixiv</p>
+                </div>
+                <div class="skeb">
+                  <div>
+                    <i class="fa-solid fa-book"></i>
+                  </div>
+                  <p class="en">skeb</p>
                 </div>
               </div>
-              <div class="myprofile">
-                <p>
-                  幼い頃から絵を描くことが好きです。<br>
-                  物語を書いたり、自分の世界に浸っている時が一番幸せを感じる時間です。<br>
-                  <br>
-                  Skebで依頼を受けたり、LINEスタンプの販売など、とにかく興味のあることにはどんどん手を出してみたいと思っています。<br>
-                  <br>
-                  ご依頼は企業個人問わず受付しております。<br>
-                  トップページのContactフォームまたはクラウドソーシングサービスからご連絡ください。<br>
-                </p>
-              </div>
             </div>
           </div>
         </div>
-
+        <div class="pf-link">
+          <div>
+            <img src="img/pixiv.png" alt="">
+          </div>
+          <div>
+            <img src="img/suzuri.png" alt="">
+          </div>
+        </div>
       </div>
+    </div>
+    <div id="works" class="wrap">
+      <div class="works">
+        <h2 class="sec-title">
+          <span class="en">WORKS</span>
+          <span class="ja">お仕事実績</span>
+        </h2>
+        <!-- <div class="years">
+          <div>
+            <h3 class="en">2023</h3>
+            <ul class="ja">
+              <li>女性向けゲーム 描き下ろし背景イラスト 1点</li>
+              <li>女性向け電子書籍　表紙イラスト</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="en">2022</h3>
+            <ul class="ja">
+              <li>フリーゲーム立ち絵素材　3体</li>
+              <li>キャラクターイラスト 1点</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="en">2021</h3>
+            <ul class="ja">
+              <li>フリーゲーム立ち絵素材　1体</li>
+              <li>キャラクターイラスト 2点</li>
+              <li>Youtube動画サムネイル制作　10点</li>
+            </ul>
+          </div>
+        </div> -->
+        <div class="work-slider">
+          <div class="slider-content">
+            <img src="img/dqf01.PNG" alt="">
+            <div class="slide-text">
+              <p class="ja">2022/8/08</p>
+              <p class="ja">キャラクターイラスト 1点</p>
+            </div>
+          </div>
+          <div class="slider-content">
+            <img src="img/archemist02.png" alt="">
+            <div class="slide-text">
+              <p class="ja">2022/8/08</p>
+              <p class="ja">キャラクターイラスト 1点</p>
+            </div>
+          </div>
+          <div class="slider-content">
+            <img src="img/artist02.png" alt="">
+            <div class="slide-text">
+              <p class="ja">2022/8/08</p>
+              <p class="ja">キャラクターイラスト 1点</p>
+            </div>
+          </div>
+          <div class="slider-content">
+            <img src="img/gsf01.PNG" alt="">
+            <div class="slide-text">
+              <p class="ja">2022/8/08</p>
+              <p class="ja">ファンアート 1点</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="gallery">
+      <div class="gallery">
+        <h2 class="sec-title">
+          <span class="en">GALLERY</span>
+          <span class="ja">イラスト一覧</span>
+        </h2>
+        <p class="ja">
+          『いにしえのイストワール』というハイファンタジー創作を中心に<br>
+          二次創作ファンアートも制作しています。
+        </p>
+      </div>
+      <div class="gallery-list">
+        <div>
+          <img src="img/archemist02.png" alt="">
+          <p class="ja">光の蝶 イラスト1</p>
+        </div>
+        <div>
+          <img src="img/artist02.png" alt="">
+          <p class="ja">光の蝶 イラスト2</p>
+        </div>
+        <div>
+          <img src="img/dqf01.PNG" alt="">
+          <p class="ja">アニメスクショ風イラスト1</p>
+        </div>
+        <div>
+          <img src="img/dqf02.png" alt="">
+          <p class="ja">アニメスクショ風イラスト2</p>
+        </div>
+        <div>
+          <img src="img/gsf01.PNG" alt="">
+          <p class="ja">ゲームファンアート1</p>
+        </div>
+        <div>
+          <img src="img/gsf02.png" alt="">
+          <p class="ja">ゲームファンアート2</p>
+        </div>
+        <div>
+          <img src="img/archemist01.png" alt="">
+          <p class="ja">錬金術師立ち絵</p>
+        </div>
+        <div>
+          <img src="img/artist01.png" alt="">
+          <p class="ja">芸術家立ち絵</p>
+        </div>
+        <div>
+          <img src="img/magician02.png" alt="">
+          <p class="ja">魔法使い立ち絵</p>
+        </div>
+        <div>
+          <img src="img/magician01.png" alt="">
+          <p class="ja">魔法使いイラスト</p>
+        </div>
+        <div>
+          <img src="img/saint01.png" alt="">
+          <p class="ja">金髪の女の子立ち絵</p>
+        </div>
+        <div>
+          <img src="img/beast01.png" alt="">
+          <p class="ja">銀色の獣少年立ち絵</p>
+        </div>
+        <div class="gallery-top">
+          <a href="#gallery">
+            <i class="fa-solid fa-angle-up"></i>
+            <p class="ja">GALLERY TOP</p>
+          </a>
+        </div>
+        <div class="pf-link">
+          <div>
+            <img src="img/pixiv.png" alt="">
+          </div>
+          <div>
+            <img src="img/suzuri.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="space"></div>
+    <div id="contact" class="wrap">
+      <div class="contact">
+        <div class="contact-text">
+          <h2 class="sec-title">
+            <span class="en">CONTACT</span>
+            <span class="ja">お問い合わせ</span>
+          </h2>
+          <p class="ja">メッセージやお仕事のご依頼は、こちらからお気軽にご連絡ください。</p>
+        </div>
+        <div class="contact-form">
+          <p class="message ja">メッセージはお気軽に下記のメールアドレス、またはTwitterのDMからよろしくお願いします。</p>
+          <!-- <p class="mail ja">xxxxxxxx@example.com</p> -->
+          <div class="twitter-link">
+            <i class="fa-brands fa-twitter"></i>
+            <p class="ja">TwitterのDMへ</p>
+          </div>
+        </div>
+        <div class="contact-attention">
+          <p class="ja">お仕事のご依頼には下記の内容を記載して、ご連絡をよろしくお願いします。<br>
+            ご依頼についてのご返信は、３日以内にお返事します。</p>
+          <p class="ja">
+          <ul class="ja">
+            <li>お名前</li>
+            <li>メッセージのやり取りができるご連絡先<br>
+              　(Twitterアカウント、メールアドレスなど)</li>
+            <li>ご依頼内容</li>
+            <li>サイズ・点数</li>
+            <li>スケジュール</li>
+            <li>ご予算</li>
+          </ul>
+          </p>
+          <p class="ja">
+            <a href="#">プライバシーポリシー</a>を確認する
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
       <ul class="slider-btm" dir="rtl">
-        <li><img src="img/ligntfairy02.png" alt="" class="btm-01"></li>
-        <li><img src="img/Monsters.png" alt="" class="btm-02"></li>
-        <li><img src="img/Artist.PNG" alt="" class="btm-03"></li>
+        <li><img src="img/artist01.png" alt=""></li>
+        <li><img src="img/archemist01.png" alt=""></li>
+        <li><img src="img/magician02.png" alt=""></li>
+        <li><img src="img/saint01.png" alt=""></li>
+        <li><img src="img/beast01.png" alt=""></li>
       </ul>
-      <!-- <a href="gallery.html" class="btn">Go Gallery</a> -->
-    </section>
-    <section id="news" class="wrap">
-      <h2 class="sec-title">
-        News
-      </h2>
-      <div class="newsbox">
-        <dl class="newslist">
-          <dt>2023年7月31日</dt>
-          <dd>サイト公開</dd>
-        </dl>
+    </div>
+    <a href="#" class="pagetop">
+      <div>
+        <i class="fa-solid fa-angle-up"></i>
+        <p class="ja">PAGE TOP</p>
       </div>
-    </section>
-    <section id="contact" class="wrap">
-      <h2 class="sec-title">Contact</h2>
-      <p class="title-jp">お問い合わせサンプル<br>※送信機能はありません</p>
-      <div class="form-box">
-        <form action="#" method="post">
-          <label for="name">名前</label>
-          <input type="text" name="your-name" id="name" placeholder="名前">
-          <label for="mail">メールアドレス</label>
-          <input type="text" name="your-mail" id="mail" placeholder="メールアドレス">
-          <label for="message">お問い合わせ内容</label>
-          <textarea name="your-message" id="message"></textarea>
-          <input type="button" value="送信" class="btn">
-        </form>
-      </div>
-    </section>
+    </a>
   </main>
   <footer id="footer">
-    <div class="footer-logo">
-      <h1 class="site-title"><a href="#">Digital Forest</a></h1>
-    </div>
-    <p class="copyright">2023 &copy;Margherita4811</p>
+    <p class="en">&copy; 2023 Margherita4811</p>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script src="js/jquery.inview.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-  <!-- <script src="js/vanila-tilt.js"></script>
-  <script type="text/javascript">
-    VanillaTilt.init(document.querySelector(".card"), {
-      max: 25,
-      speed: 400,
-      glare: true,
-      "max-glare": 1,
-    });
-  </script> -->
-  <script src="js/main.js"></script>
 </body>
-
 </html>
