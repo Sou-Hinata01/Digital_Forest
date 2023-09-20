@@ -14,15 +14,10 @@ $(function () {
     slideToScroll: 1,
     responsive: [
       {
-        breakpoint: 769, //モニターの横幅が769px以下の見せ方
+        breakpoint: 1000,
         settings: {
-          slidesToShow: 2, //スライドを画面に2枚見せる
-        },
-      },
-      {
-        breakpoint: 426, //モニターの横幅が426px以下の見せ方
-        settings: {
-          slidesToShow: 1.5, //スライドを画面に1.5枚見せる
+          slidesToShow: 1, 
+          centerPadding: "25%",
         },
       },
     ],
@@ -44,15 +39,17 @@ $(function () {
     rtl: true,
     responsive: [
       {
-        breakpoint: 769, //モニターの横幅が769px以下の見せ方
+        breakpoint: 1000,
         settings: {
-          slidesToShow: 2, //スライドを画面に2枚見せる
+          slidesToShow: 1, 
+          centerPadding: "25%",
         },
       },
       {
-        breakpoint: 426, //モニターの横幅が426px以下の見せ方
+        breakpoint: 750,
         settings: {
-          slidesToShow: 1.5, //スライドを画面に1.5枚見せる
+          slidesToShow: 1, 
+          centerPadding: "10%",
         },
       },
     ],
@@ -64,21 +61,50 @@ $(function () {
     centerMode: true,
     centerPadding: "100px",
     autoplay: true,
-    autoplaySpeed: 2000,
-    prevArrow: '<div class="slide-arrow prev-arrow"><i class="fa-solid fa-angle-right"></i></div>',
-    nextArrow: '<div class="slide-arrow next-arrow"><i class="fa-solid fa-angle-left"></i></div>',  });
-  
-  $('.pagetop,.nav-top').click(function () { 
-    $('body,html').animate({
-      scrollTop:0
-    },400);
+    autoplaySpeed: 3000,
+    prevArrow:
+      '<div class="slide-arrow prev-arrow"><i class="fa-solid fa-angle-right"></i></div>',
+    nextArrow:
+      '<div class="slide-arrow next-arrow"><i class="fa-solid fa-angle-left"></i></div>',
+      responsive: [
+        {
+          breakpoint: 1000, //モニターの横幅が1000px以下の見せ方
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            slidesToShow: 1, 
+            centerPadding: "50px",
+          },
+        },
+      ],
   });
-  
-  $('.nav-menu a[href*="#"]').click(function () { 
-    var elmHash = $(this).attr('href');
+
+  $(".pagetop,.nav-top").click(function () {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      400
+    );
+  });
+
+  $('.nav-menu a[href*="#"]').click(function () {
+    var elmHash = $(this).attr("href");
     var pos = $(elmHash).offset().top;
-    $('body,html').animate({scrollTop: pos}, 500);
+    $("body,html").animate({ scrollTop: pos }, 500);
     return false;
   });
 
+  $('.hamburger').click(function(){
+    $(this).toggleClass('open');
+    $('.nav-menu').toggleClass('open');
+  });
+  $('.nav-menu a').click(function(){
+    $('.hamburger').removeClass('open');
+    $('.nav-menu').removeClass('open');
+  });
 });
