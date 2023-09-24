@@ -701,6 +701,7 @@ main {
 }
 
 .gallery-list p {
+  text-align: center;
   font-size: 14px;
   line-height: 2;
   font-weight: 400;
