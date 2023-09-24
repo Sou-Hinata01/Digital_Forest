@@ -862,7 +862,7 @@ main {
   justify-content: center;
   flex-direction: column;
   margin: 0;
-  padding: 0 8px 46px;
+  padding: 0 15px 46px;
   position: fixed;
   right: 0;
   bottom: 0;
@@ -879,7 +879,13 @@ main {
   color: #f4ffef;
   padding: 8px 2px 14px 2px;
   border-radius: 32px;
+  transition: 0.4s ease;
 }
+
+.pagetop div:hover {
+  transform: scale(1.1, 1.1);
+}
+
 .pagetop i {
   padding: 5px;
 }
