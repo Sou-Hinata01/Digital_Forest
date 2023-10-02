@@ -679,14 +679,15 @@ main {
   justify-content: center;
   flex-flow: row wrap;
   background: transparent;
-  gap: 40px;
+  gap: 3%;
   margin-top: -40px;
   padding: 0 80px 112px;
   width: 100%;
   max-width: 100%;
 }
 
-.gallery-list div {
+.gallery-list div,
+.gallery-list a {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -694,6 +695,7 @@ main {
   margin-bottom: 112px;
   transition: 0.4s ease;
   width: 22.5%;
+  color: #6c8643;
 }
 
 .gallery-list img {
@@ -735,6 +737,7 @@ main {
   width: 1000px;
   max-width: 100%;
   border-radius: 48px;
+  margin: 3% 0;
 }
 
 .gallery-top i {

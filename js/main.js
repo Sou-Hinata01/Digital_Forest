@@ -1,4 +1,5 @@
 $(function () {
+  // 上部スライダー
   $(".slider-top").slick({
     arrows: false,
     autoplay: true,
@@ -23,6 +24,7 @@ $(function () {
     ],
   });
 
+  // 下部スライダー
   $(".slider-btm").slick({
     arrows: false,
     autoplay: true,
@@ -55,6 +57,7 @@ $(function () {
     ],
   });
 
+  // Worksスライダー
   $(".work-slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -83,6 +86,7 @@ $(function () {
       ],
   });
 
+// スムーススクロール
   $(".pagetop,.nav-top").click(function () {
     $("body,html").animate(
       {
@@ -106,5 +110,17 @@ $(function () {
   $('.nav-menu a').click(function(){
     $('.hamburger').removeClass('open');
     $('.nav-menu').removeClass('open');
+  });
+
+  // モーダルウィンドウ
+  $('.gallery-modal').modaal({
+    type:'image',
+    overlay_close:true,
+    before_open:function(){
+      $('html').css('overflow-y','hidden');
+    },
+    after_close:function(){
+      $('html').css('overflow-y','scroll');
+    }
   });
 });
