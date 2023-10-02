@@ -686,7 +686,6 @@ main {
   max-width: 100%;
 }
 
-.gallery-list div,
 .gallery-list a {
   display: flex;
   align-items: center;
@@ -694,8 +693,11 @@ main {
   gap: 16px;
   margin-bottom: 112px;
   transition: 0.4s ease;
-  width: 22.5%;
   color: #6c8643;
+}
+
+.gallery-list .gallery-modal {
+  width: 22.5%;
 }
 
 .gallery-list img {
@@ -1029,13 +1031,12 @@ main {
   }
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width: 750px) {
   .pf-link {
-        display: flex;
+    display: flex;
     flex-direction: column;
   }
   .gallery-list div {
     width: 100%;
   }
-
 }
