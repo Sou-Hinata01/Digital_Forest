@@ -679,7 +679,7 @@ main {
   justify-content: center;
   flex-flow: row wrap;
   background: transparent;
-  gap: 3%;
+  gap: 40px;
   margin-top: -40px;
   padding: 0 80px 112px;
   width: 100%;
@@ -715,8 +715,7 @@ main {
   width: 74%;
 }
 
-.gallery-list .gallery-top,
-.gallery-list .pf-link {
+.gallery-list .gallery-top{
   width: 100%;
 }
 
@@ -725,7 +724,7 @@ main {
   align-items: center !important;
   justify-content: center !important;
   flex-direction: row !important;
-  margin-bottom: 0 !important;
+  margin: 0 !important;
 }
 
 .gallery-top a {
@@ -739,7 +738,7 @@ main {
   width: 1000px;
   max-width: 100%;
   border-radius: 48px;
-  margin: 3% 0;
+  margin-bottom: 0;
 }
 
 .gallery-top i {
@@ -760,11 +759,8 @@ main {
 }
 
 .gallery-list .pf-link {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 0 !important;
-  width: 1000px;
   max-width: 100%;
+  width: 1000px;
 }
 
 .gallery-list .pf-link div {
