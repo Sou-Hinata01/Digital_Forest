@@ -864,7 +864,7 @@ main {
   justify-content: center;
   flex-direction: column;
   margin: 0;
-  padding: 0 15px 46px;
+  padding: 0 25px 45px;
   position: fixed;
   right: 0;
   bottom: 0;
@@ -872,32 +872,28 @@ main {
   z-index: 2;
 }
 
-.pagetop div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: #6c8643;
-  color: #f4ffef;
-  padding: 8px 2px 14px 2px;
-  border-radius: 32px;
-  transition: 0.4s ease;
+.pagetop img {
+  animation: bounceUpDown 0.75s infinite alternate;
+  /* transition: transform 0.4s ease; */
 }
 
-.pagetop div:hover {
-  transform: scale(1.1, 1.1);
+/* 上下に動くアニメーション */
+@keyframes bounceUpDown {
+  0% {
+      transform: translateY(0);
+      transform-origin: center;
+  }
+  100% {
+      transform: translateY(-5px);
+      transform-origin: center;
+  }
 }
 
-.pagetop i {
-  padding: 5px;
+.pagetop img:hover {
+  animation-play-state: paused;
+  transform: scale(1.1, 1.1) !important;
 }
 
-.pagetop p {
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 400;
-  writing-mode: vertical-rl;
-}
 
 #footer {
   display: flex;
