@@ -1,0 +1,528 @@
+/* リセットCSS（ブラウザごとのデフォルトスタイルをリセット） */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 全体のスタイル */
+body {
+  background: #f4ffef;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #6c8643;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  margin-right: 20px;
+}
+
+a {
+  color: #6c8643;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* ヘッダー */
+#header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  background: rgba(244, 255, 239, 0.7);
+  width: 100%;
+  z-index: 10;
+  opacity: 0;
+  transition: 0.5s;
+  padding: 10px 200px;
+}
+
+#header .site-title {
+  margin: 0;
+  font-size: 36px;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #da54ad;
+  font-weight: 200;
+}
+
+/* ヒーローセクション */
+#top {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
+  position: relative;
+  text-align: left;
+}
+
+.hero {
+  display: flex;
+  max-width: 100%;
+  height: 90vh;
+}
+
+.hero-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  max-width: 100%;
+  width: 400px;
+}
+
+.site-title {
+  font-family: "Poppins", sans-serif;
+  /* margin-bottom: 50px; */
+  letter-spacing: 1.4px;
+  font-weight: 600;
+  font-size: 48px;
+  width: 100%;
+}
+
+#top .site-title::after {
+  content: "一次創作サイト";
+  position: absolute;
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.navi {
+  margin-bottom: 100px;
+  font-size: 21px;
+  line-height: 3;
+  font-weight: 500;
+}
+
+.navi ul li {
+  position: relative;
+}
+
+.mainvisual {
+  max-width: 100%;
+  width: 1000px;
+  background: linear-gradient(
+      to left,
+      transparent 0%,
+      transparent 50%,
+      #f4ffef 100%
+    ),
+    url("img/fantasy-3054806_1920.jpg");
+  background-repeat: no-repeat;
+  margin: 100px auto;
+  margin-right: -150px;
+  background-position: center top;
+  background-size: cover;
+}
+
+.sns-link {
+  padding-top: 20px;
+}
+
+.sns-link a i {
+  font-size: 25px;
+}
+
+.scroll {
+  display: flex;
+  font-size: 20px;
+  font-weight: normal;
+  flex-direction: column;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.scroll i {
+  font-size: 25px;
+  animation: bounceUpDown 0.5s infinite alternate;
+}
+
+/* 上下に動くアニメーション */
+@keyframes bounceUpDown {
+  0% {
+    transform: translateY(0);
+    transform-origin: center;
+  }
+  100% {
+    transform: translateY(-10px);
+    transform-origin: center;
+  }
+}
+
+/* インフォメーション */
+main {
+  background: #fff;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1225px;
+  margin: 0 auto;
+}
+
+.information {
+  margin-bottom: 60px;
+}
+
+.sec-title {
+  font-size: 52px;
+  padding: 30px 0 80px;
+}
+
+.sec-title.info::after {
+  content: "お知らせ";
+  position: absolute;
+  font-size: 16px;
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+.info-box {
+  display: flex;
+}
+
+.info-box .news {
+  border: #6c8643 solid 1px;
+  border-radius: 12px;
+  width: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.info-box .info-tweet {
+  margin: 10px;
+}
+
+.news h3 {
+  font-size: 30px;
+  text-align: center;
+  margin: 10px 0 40px;
+}
+
+.news ul {
+  margin: 0 auto;
+}
+
+.news li {
+  margin: 20px 30px 30px 20px;
+  padding-left: 10px;
+  border-bottom: #6c8643 1px solid;
+}
+
+.info-tweet {
+  width: 50%;
+  overflow: hidden;
+}
+
+/* コンテンツ */
+#contents {
+  background: #f4ffef;
+  padding-bottom: 80px;
+}
+
+.sec-title.content {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding: 50px 0 50px;
+  align-items: center;
+  text-align: center;
+  vertical-align: top;
+}
+
+.sec-title.content::after,
+.sec-title.content::before {
+  content: "";
+  width: 70px;
+  height: 2px;
+  background-color: #6c8643;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.sec-title.content::after {
+  margin-left: 20px;
+}
+
+.sec-title.content::before {
+  margin-right: 20px;
+}
+
+.content-link {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-evenly;
+}
+
+.content-link div {
+  max-width: 100%;
+  width: 200px;
+}
+
+.panel {
+  display: block;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.panel div {
+  position: relative;
+  background: #fff;
+  transition: all 0.4s; /* トランジションを追加 */
+  border-radius: 50%;
+  max-height: 200px;
+}
+
+.panel:hover div {
+  transform: scale(1.1) rotate(-15deg);
+}
+
+.panel img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s; /* トランジションを追加 */
+}
+
+.panel:hover img {
+  backdrop-filter: blur(3px);
+  opacity: 0.3;
+  overflow: hidden;
+}
+
+.panel p {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.panel:hover p {
+  opacity: 1;
+}
+
+/* プロフィール */
+#profile {
+  padding: 112px 80px;
+}
+
+.profile .pf-main {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+}
+
+.profile img {
+  object-fit: contain;
+  height: auto;
+  width: 240px;
+  max-width: 100%;
+}
+
+.profile .pf-name {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  line-height: 1.4;
+  width: 100%;
+  border-bottom: #6c8643 1px dashed;
+}
+
+.profile .pf-dec {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 100%;
+}
+
+.profile .pf-main .name-ja {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.profile .pf-main .name-en {
+  font-size: 14px;
+  margin: 0 0 4px 8px;
+}
+
+.profile .pf-text {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.pf-sns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: auto;
+}
+
+.pf-sns i {
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+.pf-sns .twitter,
+.pf-sns .pixiv,
+.pf-sns .skeb {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.pf-sns .twitter div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  border: #00acee 1px solid;
+  font-size: 21px;
+  height: 60px;
+  width: 60px;
+  background: #00acee;
+  margin-bottom: 8px;
+  transition: 0.4s ease;
+}
+
+.pf-sns .twitter:hover i {
+  color: #00acee;
+}
+
+.pf-sns .pixiv:hover i {
+  color: #0071ee;
+}
+
+.pf-sns .skeb:hover i {
+  color: #64ddb3;
+}
+
+.pf-sns .twitter:hover div,
+.pf-sns .pixiv:hover div,
+.pf-sns .skeb:hover div {
+  background: #fff;
+}
+
+.pf-sns .twitter p {
+  margin: 0 auto;
+  color: #00acee;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.pf-sns .pixiv div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  border: #0071ee 1px solid;
+  font-size: 21px;
+  height: 60px;
+  width: 60px;
+  background: #0071ee;
+  margin-bottom: 8px;
+  transition: 0.4s ease;
+}
+
+.pf-sns .pixiv p {
+  margin: 0 auto;
+  color: #0071ee;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.pf-sns .skeb div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 50%;
+  border: #64ddb3 1px solid;
+  font-size: 21px;
+  height: 60px;
+  width: 60px;
+  background: #64ddb3;
+  margin-bottom: 8px;
+  transition: 0.4s ease;
+}
+
+.pf-sns .skeb p {
+  margin: 0 auto;
+  color: #64ddb3;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.pf-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 1000px;
+  padding-top: 56px;
+}
+
+.pf-link div {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.pf-link img {
+  border: #6c8643 1px solid;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 100%;
+  transition: 0.4s ease;
+}
+
+.pf-link img:hover {
+  transform: scale(1.05, 1.05);
+}
+/* フッター */
+footer {
+  background-color: #435b1f;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+}
