@@ -35,7 +35,7 @@ img {
   justify-content: space-between;
   align-items: center;
   top: 0;
-  background: rgba(244, 255, 239, 0.7);
+  background: rgba(244, 255, 239, 0.9);
   width: 100%;
   z-index: 10;
   opacity: 0;
