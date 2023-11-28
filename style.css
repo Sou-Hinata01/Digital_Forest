@@ -80,6 +80,7 @@ img {
   justify-content: space-evenly;
   max-width: 100%;
   width: 400px;
+  margin-right: 50px;
 }
 
 .site-title {
@@ -122,7 +123,7 @@ img {
     url("img/fantasy-3054806_1920.jpg");
   background-repeat: no-repeat;
   margin: 100px auto;
-  margin-right: -150px;
+  margin-right: -100px;
   background-position: center top;
   background-size: cover;
 }
@@ -168,7 +169,7 @@ main {
 
 .wrap {
   width: 100%;
-  max-width: 1225px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
