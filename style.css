@@ -90,6 +90,9 @@ img {
   font-weight: 600;
   font-size: 48px;
   width: 100%;
+  opacity: 0;
+  transform: translateX(25%); /* 最初は左側に配置 */
+  transition: opacity 1s, transform 1s; /* アニメーションにかかる時間を指定 */
 }
 
 #top .site-title::after {
@@ -109,9 +112,13 @@ img {
 
 .navi ul li {
   position: relative;
+  opacity: 0;
+  transform: translateX(50%); /* 最初は左側に配置 */
+  transition: opacity 1s, transform 1s; /* アニメーションにかかる時間を指定 */
 }
 
 .mainvisual {
+  display: none;
   max-width: 100%;
   width: 1000px;
   background: linear-gradient(
@@ -514,6 +521,14 @@ footer {
   color: #fff;
   text-align: center;
   padding: 10px;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #6c8643;
 }
 
 /* particle.js */

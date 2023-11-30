@@ -1,4 +1,26 @@
 $(function(){
+  $('.mainvisual').fadeIn(1000); //フェードイン
+
+  const listItems = document.querySelectorAll('.nav-list');
+
+  // ページが読み込まれたらアニメーションを開始
+  listItems.forEach(function (item, index) {
+    setTimeout(function () {
+      item.style.opacity = '1';
+      item.style.transform = 'translateX(0)';
+    }, index * 200 + 500); // インデックスに応じてディレイをかける（500ミリ秒ごと）
+  });
+
+  const title = document.querySelectorAll('.site-title');
+
+  // ページが読み込まれたらアニメーションを開始
+  title.forEach(function (item, index) {
+    setTimeout(function () {
+      item.style.opacity = '1';
+      item.style.transform = 'translateX(0)';
+    }, index * 200 + 500); // インデックスに応じてディレイをかける（500ミリ秒ごと）
+  });
+
   var navbar = $('#header');
   var showHeight = 100;
 
