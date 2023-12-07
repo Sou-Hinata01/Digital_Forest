@@ -493,6 +493,7 @@ main {
   gap: 24px;
   width: 1000px;
   padding-top: 56px;
+  margin: 0 auto;
 }
 
 .pf-link div {
