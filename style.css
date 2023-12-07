@@ -90,8 +90,11 @@ img {
   font-weight: 600;
   font-size: 48px;
   width: 100%;
+}
+
+#top .site-title {
   opacity: 0;
-  transform: translateX(25%); /* 最初は左側に配置 */
+  transform: translateX(25%); /* 最初は右側に配置 */
   transition: opacity 1s, transform 1s; /* アニメーションにかかる時間を指定 */
 }
 
@@ -113,8 +116,8 @@ img {
 .navi ul li {
   position: relative;
   opacity: 0;
-  transform: translateX(50%); /* 最初は左側に配置 */
-  transition: opacity 1s, transform 1s; /* アニメーションにかかる時間を指定 */
+  transform: translateX(50%); /* 最初は右側に配置 */
+  transition: all 1s; /* アニメーションにかかる時間を指定 */
 }
 
 .mainvisual {
@@ -150,6 +153,9 @@ img {
   flex-direction: column;
   margin: 0 auto 50px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(-50%); /* 最初は上側に配置 */
+  transition: opacity 1s, transform 1s; /* アニメーションにかかる時間を指定 */
 }
 
 .scroll i {
