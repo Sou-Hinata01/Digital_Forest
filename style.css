@@ -117,7 +117,7 @@ img {
   position: relative;
   opacity: 0;
   transform: translateX(50%); /* 最初は右側に配置 */
-  transition: all 1s; /* アニメーションにかかる時間を指定 */
+  transition: opacity 1s, transform 1s; /* アニメーションにかかる時間を指定 */
 }
 
 .mainvisual {
