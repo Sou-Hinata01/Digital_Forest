@@ -39,10 +39,10 @@ $(function () {
 
   $(".navi ul li").hover(
     function () {
-      $(this).stop().animate({ left: "10px" }, 300);
+      $(this).stop().animate({ left: "10px" }, 500);
     },
     function () {
-      $(this).stop().animate({ left: "0" }, 300);
+      $(this).stop().animate({ left: "0" }, 500);
     }
   );
 
