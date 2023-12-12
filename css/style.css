@@ -863,37 +863,25 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0;
-  padding: 0 25px 45px;
+  margin: 20px;
   position: fixed;
   right: 0;
   bottom: 0;
   max-width: 100%;
+  width: 100px;
+  height: 100px;
   z-index: 2;
+  transition: all 0.4s ease;
+  opacity: 0;
 }
 
 .pagetop img {
   animation: bounceUpDown 0.75s infinite alternate;
-  /* transition: transform 0.4s ease; */
 }
 
-/* 上下に動くアニメーション */
-@keyframes bounceUpDown {
-  0% {
-      transform: translateY(0);
-      transform-origin: center;
-  }
-  100% {
-      transform: translateY(-5px);
-      transform-origin: center;
-  }
+.pagetop:hover {
+  transform: scale(1.1, 1.1);
 }
-
-.pagetop img:hover {
-  animation-play-state: paused;
-  transform: scale(1.1, 1.1) !important;
-}
-
 
 #footer {
   display: flex;

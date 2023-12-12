@@ -17,7 +17,7 @@ $(function () {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 1, 
+          slidesToShow: 1,
           centerPadding: "25%",
         },
       },
@@ -43,14 +43,14 @@ $(function () {
       {
         breakpoint: 1000,
         settings: {
-          slidesToShow: 1, 
+          slidesToShow: 1,
           centerPadding: "25%",
         },
       },
       {
         breakpoint: 750,
         settings: {
-          slidesToShow: 1, 
+          slidesToShow: 1,
           centerPadding: "10%",
         },
       },
@@ -69,24 +69,24 @@ $(function () {
       '<div class="slide-arrow prev-arrow"><i class="fa-solid fa-angle-right"></i></div>',
     nextArrow:
       '<div class="slide-arrow next-arrow"><i class="fa-solid fa-angle-left"></i></div>',
-      responsive: [
-        {
-          breakpoint: 1000, //モニターの横幅が1000px以下の見せ方
-          settings: {
-            slidesToShow: 1,
-          },
+    responsive: [
+      {
+        breakpoint: 1000, //モニターの横幅が1000px以下の見せ方
+        settings: {
+          slidesToShow: 1,
         },
-        {
-          breakpoint: 750,
-          settings: {
-            slidesToShow: 1, 
-            centerPadding: "50px",
-          },
+      },
+      {
+        breakpoint: 750,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "50px",
         },
-      ],
+      },
+    ],
   });
 
-// スムーススクロール
+  // スムーススクロール
   $(".pagetop,.nav-top").click(function () {
     $("body,html").animate(
       {
@@ -103,24 +103,38 @@ $(function () {
     return false;
   });
 
-  $('.hamburger').click(function(){
-    $(this).toggleClass('open');
-    $('.nav-menu').toggleClass('open');
+  $(".hamburger").click(function () {
+    $(this).toggleClass("open");
+    $(".nav-menu").toggleClass("open");
   });
-  $('.nav-menu a').click(function(){
-    $('.hamburger').removeClass('open');
-    $('.nav-menu').removeClass('open');
+  $(".nav-menu a").click(function () {
+    $(".hamburger").removeClass("open");
+    $(".nav-menu").removeClass("open");
   });
 
   // モーダルウィンドウ
-  $('.gallery-modal').modaal({
-    type:'image',
-    overlay_close:true,
-    before_open:function(){
-      $('html').css('overflow-y','hidden');
+  $(".gallery-modal").modaal({
+    type: "image",
+    overlay_close: true,
+    before_open: function () {
+      $("html").css("overflow-y", "hidden");
     },
-    after_close:function(){
-      $('html').css('overflow-y','scroll');
-    }
+    after_close: function () {
+      $("html").css("overflow-y", "scroll");
+    },
+  });
+
+  const navbar = $(".pagetop");
+  const showHeight = 500;
+
+  $(window).scroll(function () {
+    navbar.css("opacity", $(this).scrollTop() >= showHeight ? 1 : 0);
+  });
+
+  $("a[href='#']").click(function () {
+    $("html,body").animate({ scrollTop: 0 }, "slow", function () {
+      navbar.css("opacity", 0);
+    });
+    return false;
   });
 });
