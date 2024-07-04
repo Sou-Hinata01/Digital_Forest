@@ -145,7 +145,7 @@ section:not(.hero) {
   font-size: 48px;
   font-weight: 600;
   color: #6c8643;
-  margin: 20px auto 50px;
+  margin: 35px auto;
   padding: 0 55px;
 }
 .sec-title::after {
