@@ -584,6 +584,10 @@ input[name=tab-item] {
   text-decoration: none;
 }
 
+.contact-listContents li::before {
+  content: "・";
+}
+
 .pagetop {
   display: flex;
   align-items: center;
