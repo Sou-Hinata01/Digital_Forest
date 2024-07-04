@@ -1,140 +1,95 @@
 $(function () {
-  // 上部スライダー
-  $(".slider-top").slick({
-    arrows: false,
-    autoplay: true,
-    centerMode: true,
-    centerPadding: "38%",
-    autoplaySpeed: 0,
-    speed: 9000,
-    infinite: true,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    cssEase: "linear",
-    slideToShow: 5,
-    slideToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "25%",
-        },
-      },
-    ],
-  });
-
-  // 下部スライダー
-  $(".slider-btm").slick({
-    arrows: false,
-    autoplay: true,
-    centerMode: true,
-    centerPadding: "38%",
-    autoplaySpeed: 0,
-    speed: 9000,
-    infinite: true,
-    pauseOnFocus: false,
-    pauseOnHover: false,
-    cssEase: "linear",
-    slideToShow: 5,
-    slideToScroll: 1,
-    rtl: true,
-    responsive: [
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "25%",
-        },
-      },
-      {
-        breakpoint: 750,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "10%",
-        },
-      },
-    ],
-  });
-
-  // Worksスライダー
-  $(".work-slider").slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "100px",
-    autoplay: true,
-    autoplaySpeed: 3000,
-    prevArrow:
-      '<div class="slide-arrow prev-arrow"><i class="fa-solid fa-angle-right"></i></div>',
-    nextArrow:
-      '<div class="slide-arrow next-arrow"><i class="fa-solid fa-angle-left"></i></div>',
-    responsive: [
-      {
-        breakpoint: 1000, //モニターの横幅が1000px以下の見せ方
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 750,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "50px",
-        },
-      },
-    ],
-  });
-
   // スムーススクロール
   $(".pagetop,.nav-top").click(function () {
     $("body,html").animate(
       {
-        scrollTop: 0,
+        scrollTop: 0, //ページトップまでスクロール
       },
-      400
-    );
+      500
+    ); //ページトップスクロールの速さ。数字が大きいほど遅くなる
+    return false; //リンク自体の無効化
   });
 
-  $('.nav-menu a[href*="#"]').click(function () {
-    var elmHash = $(this).attr("href");
-    var pos = $(elmHash).offset().top;
-    $("body,html").animate({ scrollTop: pos }, 500);
-    return false;
-  });
+// ページトップボタンのクラス名
+const navbar = $(".pagetop");
 
-  $(".hamburger").click(function () {
-    $(this).toggleClass("open");
-    $(".nav-menu").toggleClass("open");
-  });
-  $(".nav-menu a").click(function () {
-    $(".hamburger").removeClass("open");
-    $(".nav-menu").removeClass("open");
-  });
+// ボタンを表示するスクロール位置
+const showHeight = 500;
 
-  // モーダルウィンドウ
-  $(".gallery-modal").modaal({
-    type: "image",
-    overlay_close: true,
-    before_open: function () {
-      $("html").css("overflow-y", "hidden");
+// ウィンドウのスクロールイベントを設定
+$(window).scroll(function () {
+  // 現在のスクロール位置がshowHeight以上ならばボタンを表示
+  // それ以外なら非表示）
+  navbar.css("opacity", $(this).scrollTop() >= showHeight ? 1 : 0);
+});
+
+  // 背景パーティクル
+  particlesJS("particles-js", {
+    particles: {
+      // パーティクルの数
+      number: { value: 14, density: { enable: true, value_area: 500 } },
+
+      // パーティクルの色
+      color: { value: "#ffffff" },
+
+      // パーティクルの形状
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#000" },
+        polygon: { nb_sides: 6 },
+        image: { src: "img/github.svg", width: 100, height: 100 },
+      },
+
+      // パーティクルの透明度
+      opacity: {
+        value: 0.3,
+        random: true,
+        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+      },
+
+      // パーティクルのサイズ
+      size: {
+        value: 120,
+        random: true,
+        anim: { enable: false, speed: 10, size_min: 40, sync: false },
+      },
+
+      // パーティクル同士を繋ぐ線
+      line_linked: {
+        enable: false,
+        distance: 200,
+        color: "#ffffff",
+        opacity: 1,
+        width: 2,
+      },
+
+      // パーティクルの動き
+      move: {
+        enable: true,
+        speed: 5,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: { enable: false, rotateX: 600, rotateY: 1200 },
+      },
     },
-    after_close: function () {
-      $("html").css("overflow-y", "scroll");
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: false, mode: "grab" },
+        onclick: { enable: false, mode: "push" },
+        resize: true,
+      },
+      modes: {
+        grab: { distance: 400, line_linked: { opacity: 1 } },
+        bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+        repulse: { distance: 200, duration: 0.4 },
+        push: { particles_nb: 4 },
+        remove: { particles_nb: 2 },
+      },
     },
-  });
-
-  const navbar = $(".pagetop");
-  const showHeight = 500;
-
-  $(window).scroll(function () {
-    navbar.css("opacity", $(this).scrollTop() >= showHeight ? 1 : 0);
-  });
-
-  $("a[href='#']").click(function () {
-    $("html,body").animate({ scrollTop: 0 }, "slow", function () {
-      navbar.css("opacity", 0);
-    });
-    return false;
+    retina_detect: true,
   });
 });
