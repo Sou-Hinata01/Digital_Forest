@@ -43,6 +43,7 @@
 }
 
 .navMenu {
+  opacity: 0;
   display: flex;
   text-align: center;
   gap: 40px;
@@ -78,6 +79,7 @@
 #hero {
   padding-top: 85px;
   max-height: 800px;
+  overflow: hidden;
 }
 
 section:not(.hero) {
@@ -92,10 +94,12 @@ section:not(.hero) {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  overflow: hidden;
 }
 
 /* ニュース */
 #news {
+  z-index: 1;
   border-top: #435b1f 1px solid;
   background-color: #f4ffef;
   font-family: "Noto Sans JP", sans-serif;
@@ -128,6 +132,9 @@ section:not(.hero) {
   padding: 10px;
   display: flex;
   align-items: center;
+}
+.news p {
+  opacity: 0;
 }
 
 /* 仕事実績 */
