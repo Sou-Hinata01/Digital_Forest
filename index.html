@@ -17,65 +17,88 @@
 
 <body>
   <div id="particles-js"></div>
-  <header id="header">
-    <h1 class="site-title">Digital Forest</h1>
-    <nav class="navMenu navMenu--pc animate__animated animate__fadeInDown">
-      <a href="" class="nav-top">
-        <p class="navMenu__text navMenu__text--en">TOP</p>
-        <p class="navMenu__text navMenu__text--ja">トップ</p>
-      </a>
-      <a href="">
-        <p class="navMenu__text navMenu__text--en">WORKS</p>
-        <p class="navMenu__text navMenu__text--ja">お仕事実績</p>
-      </a>
-      <a href="">
-        <p class="navMenu__text navMenu__text--en">CREATION</p>
-        <p class="navMenu__text navMenu__text--ja">一次創作</p>
-      </a>
-      <a href="">
-        <p class="navMenu__text navMenu__text--en">PROFILE</p>
-        <p class="navMenu__text navMenu__text--ja">プロフィール</p>
-      </a>
-      <a href="">
-        <p class="navMenu__text navMenu__text--en">CONTACT</p>
-        <p class="navMenu__text navMenu__text--ja">お問い合わせ</p>
-      </a>
+  <header id="header" class="header animate__animated animate__fadeInDown">
+    <div class="header__logo">
+      <img src="img/logo.png" alt="">
+      <h1>Digital Forest</h1>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li class="header__menu--item">
+          <a href="" class="header__menu--link nav-top">
+            <p class="header__link--en">TOP</p>
+            <p class="header__link--ja">トップ</p>
+          </a>
+        </li>
+        <li class="header__menu--item">
+          <a href="" class="header__menu--link">
+            <p class="header__link--en">WORKS</p>
+            <p class="header__link--ja">お仕事実績</p>
+          </a>
+        </li>
+        <li class="header__menu--item">
+          <a href="" class="header__menu--link">
+            <p class="header__link--en">CREATION</p>
+            <p class="header__link--ja">一次創作</p>
+          </a>
+        </li>
+        <li class="header__menu--item">
+          <a href="" class="header__menu--link">
+            <p class="header__link--en">PROFILE</p>
+            <p class="header__link--ja">プロフィール</p>
+          </a>
+        </li>
+        <li class="header__menu--item">
+          <a href="" class="header__menu--link">
+            <p class="header__link--en">CONTACT</p>
+            <p class="header__link--ja">お問い合わせ</p>
+          </a>
+        </li>
+      </ul>
+      <div id="hamburger" class="header__hamburger">
+        <span class="header__hamburger--line"></span>
+        <span class="header__hamburger--line"></span>
+        <span class="header__hamburger--line"></span>
+      </div>
     </nav>
   </header>
   <main>
     <article>
-      <section id="hero" class="wrap hero">
-        <div class="mainvisual animate__animated animate__fadeIn">
+      <section id="hero" class="hero wrap">
+        <div class="hero__mainvisual animate__animated animate__fadeIn">
+          <img src="img/mainvisual.png" alt="">
+        </div>
+        <div class="hero__container">
 
         </div>
       </section>
-      <div id="news">
-        <div class="news wrap">
+      <div id="news" class="news">
+        <div>
           <h2>News</h2>
-          <p class="animate__animated animate__fadeInDown">2024/07/04<a href="" class="news-link">さらにサイトをリニューアル</a></p>
+          <p class="animate__animated animate__fadeInDown">2024/09/09<a href="" class="newslink">サイトのレスポンシブ対応</a></p>
         </div>
       </div>
       <section id="works" class="works">
         <div class="wrap">
           <h1 class="sec-title">Works</h1>
-          <div class="tabs">
+          <div class="works__tab">
             <input type="radio" id="all" name="tab-item" checked>
-            <label for="all" class="tab-item">すべて</label>
+            <label for="all" class="works__tab--item">すべて</label>
             <input type="radio" id="web" name="tab-item">
-            <label for="web" class="tab-item">Web制作</label>
+            <label for="web" class="works__tab--item">Web制作</label>
             <input type="radio" id="illustration" name="tab-item">
-            <label for="illustration" class="tab-item">イラスト</label>
-            <div class="tab-content" id="all-content">
+            <label for="illustration" class="works__tab--item">イラスト</label>
+            <div class="works__tab--content" id="all-content">
               <p>タブ01の内容</p>
               <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
               <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
             </div>
-            <div class="tab-content" id="web-content">
+            <div class="works__tab--content" id="web-content">
               <p>タブ02の内容</p>
               <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
               <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
             </div>
-            <div class="tab-content" id="illust-content">
+            <div class="works__tab--content" id="illust-content">
               <p>タブ03の内容</p>
               <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
               <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
@@ -89,111 +112,85 @@
       <section id="creation" class="creation">
         <div class="wrap">
           <h1 class="sec-title">Creation</h1>
-          <ul class="creation-list">
+          <ul class="creation__list">
             <li>
-              <a href="" class="creation-panel">
-                <div>
-                  <img src="img/mainvisual.png" alt="いにしえのイストワール">
-                  <p>いにしえの<br>イストワール</p>
-                </div>
+              <a href="" class="creation__panel creation__panel--01">
               </a>
             </li>
             <li>
-              <a href="" class="creation-panel">
-                <div>
-                  <img src="img/Reincarnation.png" alt="Reincarnation">
-                  <p>Reincarnation</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="" class="creation-panel">
-                <div>
-                  <img src="img/Grace_Monsters.png" alt="Grace Monsters">
-                  <p>Grace Monsters</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="" class="creation-panel">
-                <div>
-                  <img src="img/Cutie_FoodMate.png" alt="キューティーフードメイト">
-                  <p>キューティーフードメイト</p>
-                </div>
+              <a href="" class="creation__panel creation__panel--02">
               </a>
             </li>
           </ul>
-          <div class="more-button more-button--push">
-            <a href="#"><span>もっと見る</span></a>
-          </div>
         </div>
       </section>
-      <section id="profile">
-        <div class="profile wrap">
+      <section id="profile" class="profile">
+        <div class="wrap">
           <h1 class="sec-title">Profile</h1>
           <div>
-            <div class="pf-main">
-              <img src="img/pf.PNG" alt="アイコン">
-              <div class="pf-dec">
-                <div class="pf-name">
-                  <p class="name-ja ja">雛菊 コトカ</p>
-                  <p class="name-en ja">Margherita4811</p>
+            <div class="profile__main">
+              <img src="img/pf.PNG" alt="アイコン" class="profile__icon">
+              <div class="profile__direction">
+                <div class="profile__name">
+                  <p class="profile__name profile__name--ja">雛菊 コトカ</p>
+                  <p class="profile__name profile__name--en">Margherita4811</p>
                 </div>
-                <div class="pf-text ja">
+                <div class="profile__text">
                   <p>私にとって『ものづくり』は、『自分を表現する手段』です。<br>
                     絵を描くことも、文章を書くことも、Webサイトの制作も私にとってはその一つにすぎません。<br>
                     自分が自分であるために、自分にしかできないことを最大限にアピールする。<br>
                     それが『ものづくり』をするにあたって重要なことだと私は思っています。</p>
                 </div>
-                <div class="pf-sns">
-                  <a class="twitter" href="https://twitter.com/Margherita4811" target="_blank">
+                <div class="profile__sns">
+                  <a class="profile__sns--twitter" href="https://twitter.com/Margherita4811" target="_blank">
                     <div>
                       <i class="fa-brands fa-twitter"></i>
                     </div>
-                    <p class="en">Twitter</p>
+                    <p class="profile__sns--en">Twitter</p>
                   </a>
-                  <a class="pixiv" href="https://www.pixiv.net/users/35166938" target="_blank">
+                  <a class="profile__sns--pixiv" href="https://www.pixiv.net/users/35166938" target="_blank">
                     <div>
                       <i class="fa-solid fa-paintbrush"></i>
                     </div>
-                    <p class="en">pixiv</p>
+                    <p class="profile__sns--en">pixiv</p>
                   </a>
-                  <a class="skeb" href="https://skeb.jp/@Margherita4811" target="_blank">
+                  <a class="profile__sns--skeb" href="https://skeb.jp/@Margherita4811" target="_blank">
                     <div>
                       <i class="fa-solid fa-book"></i>
                     </div>
-                    <p class="en">skeb</p>
+                    <p class="profile__sns--en">skeb</p>
                   </a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="pf-link">
-            <a href="https://www.pixiv.net/users/35166938" target="_blank">
-              <img src="img/pixiv.png" alt="pixiv">
-            </a>
-            <a href="https://suzuri.jp/margherita4811" target="_blank">
-              <img src="img/suzuri.png" alt="suzuri">
-            </a>
+            <div class="profile__link">
+              <a href="https://www.pixiv.net/users/35166938" target="_blank">
+                <img src="img/pixiv.png" alt="pixiv">
+              </a>
+              <a href="https://suzuri.jp/margherita4811" target="_blank">
+                <img src="img/suzuri.png" alt="suzuri">
+              </a>
+            </div>
+
           </div>
         </div>
       </section>
-      <section id="contact">
-        <div class="contact wrap">
+      <section id="contact" class="contact">
+        <div class="wrap">
           <h1 class="sec-title">Contact</h1>
-          <div class="contact-text">
+          <div class="contact__text">
             <p>メッセージやお仕事のご依頼は、こちらからお気軽にご連絡ください。</p>
-            <div class="contact-form">
-              <p class="message">メッセージはお気軽にTwitterのDMからよろしくお願いします。</p>
-              <div class="twitter-link">
+            <div class="contact__form">
+              <p class="contact__form--message">メッセージはお気軽にTwitterのDMからよろしくお願いします。</p>
+              <div class="contact__form--twitter-link">
                 <i class="fa-brands fa-twitter"></i>
                 <p>TwitterのDMへ</p>
               </div>
             </div>
-            <div class="contact-attention">
+            <div class="contact__attention">
               <p>お仕事のご依頼には下記の内容を記載して、ご連絡をよろしくお願いします。<br>
                 ご依頼についてのご返信は、３日以内にお返事します。</p>
-              <ul class="contact-listContents">
+              <ul class="contact__list-contents">
                 <li>お名前</li>
                 <li>メッセージのやり取りができるご連絡先<br>
                   　(Twitterアカウント、メールアドレスなど)</li>
@@ -209,18 +206,32 @@
           </div>
         </div>
       </section>
-      <a href="#" class="pagetop">
-        <img src="img/ToP.png" alt="">
-      </a>
+      <footer id="footer">
+        <p>&copy; 2023 Margherita4811</p>
+      </footer>
     </article>
   </main>
-  <footer id="footer">
-    <p>&copy; 2023 Margherita4811</p>
-  </footer>
   <script src="https://kit.fontawesome.com/94d419d03c.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="js/particles.min.js"></script>
+  <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".creation__panel--01"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.5,
+    });
+  </script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".creation__panel--02"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.5,
+    });
+  </script>
   <script src="js/main.js"></script>
 </body>
 
