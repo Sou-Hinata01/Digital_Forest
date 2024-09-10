@@ -1,34 +1,43 @@
+// 「hamburger」IDを持つ要素にクリックイベントを追加
 document.getElementById("hamburger").addEventListener("click", function () {
+  // 「header__menu」クラスを持つ要素を取得し、menu変数に代入
   const menu = document.querySelector(".header__menu");
+  // 「hamburger」IDを持つ要素を取得し、hamburger変数に代入
   const hamburger = document.getElementById("hamburger");
 
+  // 「menu」のクラスリストに「open」をトグル（追加/削除）する
   menu.classList.toggle("open");
+  // 「hamburger」のクラスリストに「active」をトグル（追加/削除）する
   hamburger.classList.toggle("active");
 });
 
-$(function () {
-  // スムーススクロール
-  $(".nav-top").click(function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0, //ページトップまでスクロール
-      },
-      500
-    ); //ページトップスクロールの速さ。数字が大きいほど遅くなる
-    return false; //リンク自体の無効化
-  });
+// スムーススクロール
+// headerの高さを取得し、headerHeightに代入
+const headerHeight = document.querySelector("header").offsetHeight;
 
-  // ページトップボタンのクラス名
-  const navbar = $(".pagetop");
+//querySelectorAllメソッドを使用してページ内のhref属性が#で始まるものを選択
+//forEachメソッドを使って、各アンカータグにクリックされた時の処理
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    // クリックされたときのデフォルトの挙動を防ぐ
+    e.preventDefault();
 
-  // ボタンを表示するスクロール位置
-  const showHeight = 500;
+    // クリックされたアンカータグのhref属性を取得
+    const href = anchor.getAttribute("href");
 
-  // ウィンドウのスクロールイベントを設定
-  $(window).scroll(function () {
-    // 現在のスクロール位置がshowHeight以上ならばボタンを表示
-    // それ以外なら非表示）
-    navbar.css("opacity", $(this).scrollTop() >= showHeight ? 1 : 0);
+    // href属性の#を取り除いた部分と一致するIDを取得
+    const target = document.getElementById(href.replace("#", ""));
+
+    //取得した要素の位置を取得するために、getBoundingClientRect()を呼び出し、ページ上の位置を計算。
+    //headerの高さを引いて、スクロール位置がヘッダーの下になるように調整します。
+    const targetPosition =
+      target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+    // window.scrollTo()を呼び出して、スクロール位置を設定します。behaviorオプションをsmoothに設定することで、スムーズなスクロールを実現します。
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
   });
 });
 
