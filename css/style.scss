@@ -28,6 +28,10 @@ img {
   font-style: normal;
 }
 
+html {
+    scroll-padding-top: 85px;
+}
+
 .sec-title {
   position: relative;
   display: inline-block;
@@ -730,8 +734,9 @@ body {
     &__mainvisual {
       padding: 10px;
     }
-    &__container {
-    }
+/*     &__container {
+      
+    } */
   }
   .wrap {
     margin: 0 auto;
